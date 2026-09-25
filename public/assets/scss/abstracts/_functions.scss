@@ -1,0 +1,16 @@
+@use 'sass:map';
+@use 'sass:math';
+@use 'variables' as *;
+
+@function fluid($min-size, $max-size) {
+  $min-vw: map.get($breakpoints, mobile);
+  $max-vw: map.get($breakpoints, desktop);
+
+  // Growth per pixel of viewport width
+  $slope: math.div($max-size - $min-size, $max-vw - $min-vw);
+
+  // Starting value of the linear equation
+  $intercept: $min-size - $slope * $min-vw;
+
+  @return clamp(#{$min-size}, #{$intercept} + #{$slope * 100vw}, #{$max-size});
+}
