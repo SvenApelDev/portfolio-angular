@@ -5,7 +5,7 @@ $color-background: #1c1c1c;
 $color-text: #ffffff;
 $color-hero-text: #d9d9d9;
 $color-gradient-end: #08463b;
-$color-error: #EC7B7B;
+$color-error: #ec7b7b;
 
 $color-primary-10: rgba($color-primary, 0.1);
 $color-primary-30: rgba($color-primary, 0.3);
@@ -25,4 +25,12 @@ $font-secondary: 'Karla', sans-serif;
 $font-weight-regular: 400;
 $font-weight-medium: 500;
 $font-weight-bold: 700;
+
+
+// Breakpoints
+
+$breakpoints: (
+    mobile: 320px,
+    desktop: 1440px,
+);
 
