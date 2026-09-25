@@ -14,7 +14,6 @@ $color-text-50: rgba($color-text, 0.5);
 $color-text-80: rgba($color-text, 0.8);
 $color-error-80: rgba($color-error, 0.8);
 
-
 // Fonts
 
 $font-primary: 'Fira Code', monospace;
@@ -26,12 +25,11 @@ $font-weight-regular: 400;
 $font-weight-medium: 500;
 $font-weight-bold: 700;
 
-
 // Breakpoints
 
 $breakpoints: (
-    mobile: 320px,
-    tablet: 1024px,
-    desktop: 1440px,
+  min: 320px,
+  mobile: 390px,
+  tablet: 1024px,
+  desktop: 1440px,
 );
-
