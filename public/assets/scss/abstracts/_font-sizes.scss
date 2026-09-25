@@ -1,0 +1,25 @@
+@use 'functions' as *;
+
+
+// Font sizes - fluid(mobile, desktop)
+
+$font-size-hero-name: fluid(62px, 128px);
+$font-size-hero-subtitle: fluid(24px, 40px);
+$font-size-section-title: fluid(56px, 64px);  // "About me", "Skill Set", "Featured Projects", "Let's work together"
+$font-size-section-label: fluid(18px, 24px);  // "Who I Am", "Technologies", "Portfolio", "Contact me"
+$font-size-references-title: fluid(24px, 32px);
+$font-size-subheadline: fluid(20px, 24px); // "Got a problem to solve?", "You need another skill?"
+$font-size-form-label: fluid(20px, 24px);
+$font-size-marquee: fluid(24px, 32px);
+$font-size-skill-label: fluid(16px, 18px);
+$font-size-quote: fluid(18px, 20px);
+
+
+// Font sizes - fixed
+
+$font-size-project-title: 24px;
+$font-size-nav: 20px;
+$font-size-body: 18px; // body text, buttons, input fields, copyright
+$font-size-small: 16px; // footer links, language toggle
+$font-size-privacy: 15px;
+$font-size-error: 14px;
