@@ -1,0 +1,9 @@
+@use 'sass:map';
+@use 'variables' as *;
+
+// Applies styles up to and including the given breakpoint
+@mixin respond($breakpoint) {
+    @media (max-width: map.get($brakpoints, $breakpoint)) {
+        @content;
+    }
+}
