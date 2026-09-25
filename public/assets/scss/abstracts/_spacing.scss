@@ -1,0 +1,9 @@
+@use 'functions' as *;
+
+// Spacing - fluid(mobile, desktop)
+
+$spacing-page: fluid(16px, 96px);
+
+// Layout - fixed
+
+$content-max-width: 1248px;
