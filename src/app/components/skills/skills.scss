@@ -1,0 +1,91 @@
+@use 'all-styles' as *;
+
+.skills {
+    background: radial-gradient(
+        circle 340px at 1% 52%, rgba($color-gradient-end, 0.3) 0%, $color-background 100%
+    );
+}
+
+.skills__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 96px;
+}
+
+// Box
+
+.skills__box {
+    display: flex;
+    flex: 0 1 520px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skills__card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 32px;
+    border: 1px solid $color-primary;
+    border-radius: 30px;
+    background-color: $color-primary-10;
+}
+
+.skills__text {
+    margin-bottom: -8px;
+    text-align: justify;
+}
+
+.skills__more {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.skills__subheadline {
+    font-size: $font-size-subheadline;
+    line-height: 1.2;
+
+    span {
+        color: $color-primary;
+    }
+}
+
+.skills__small {
+    font-size: $font-size-small;
+}
+
+.skills__btn {
+    font-size: $font-size-small;
+    font-weight: $font-weight-bold;
+    color: $color-primary;
+}
+
+// Grid
+
+.skills__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 104px);
+    column-gap: 72px;
+    row-gap: 40px;
+    margin-top: 48px;
+}
+
+.skills__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-family: $font-primary;
+    font-size: $font-size-skill-label;
+    letter-spacing: -0.03em;
+    text-align: center;
+
+    img {
+        width: 64px;
+        height: 64px;
+    }
+}
+

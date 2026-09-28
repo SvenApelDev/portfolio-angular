@@ -1,5 +1,37 @@
 <section id="skills" class="skills">
-    <div class="container">
-        <p>skills works!</p>
+  <div class="skills__inner container">
+    <div class="skills__box">
+      <p class="section-label">Technologies</p>
+      <div class="skills__card">
+        <h2 class="section-title">Skill Set</h2>
+        <p class="skills__text">
+          A short introduction of your skills. Highlight your experience of using different
+          front-end technologies and emphasise your openness to learning and adapting to new
+          technologies. Show how important it is for you to keep up with the rapid changes in web
+          development.
+        </p>
+        <div class="skills__more">
+          <h3 class="skills__subheadline">You need <span>another skill?</span></h3>
+          <p class="skills__small">
+            Feel free to contact me. I look forward to expanding on my previous knowledge.
+          </p>
+        </div>
+
+        <a class="btn skills__btn" routerLink="/" fragment="contact">Let's talk!</a>
+      </div>
     </div>
+
+    <ul class="skills__grid">
+      @for (skill of skills; track skill.name) {
+        <li class="skills__item">
+          <img [src]="'assets/images/skills/' + skill.icon" alt="" />
+          <span>{{ skill.name }}</span>
+        </li>
+      }
+      <li class="skills__item skills__item--growth">
+        <img src="assets/images/skills/icon-growth-mindset.svg" alt="" />
+        <span>Growth<br />mindset</span>
+      </li>
+    </ul>
+  </div>
 </section>
