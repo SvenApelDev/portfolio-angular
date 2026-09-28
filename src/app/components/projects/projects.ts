@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PROJECTS } from './projects.data';
 
 @Component({
   imports: [],
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './projects.scss',
   templateUrl: './projects.html',
 })
-export class Projects {}
+export class Projects {
+  protected readonly projects = PROJECTS;
+}
