@@ -1,5 +1,36 @@
 <section class="hero">
-    <div class="container">
-        <p>hero works!</p>
+    <div class="hero__content">
+        <p class="hero__subtitle">Frontend Developer</p>
+        <h1 class="hero__name">Sven Apel</h1>
+        <div class="hero__buttons">
+            <a class="btn" routerLink="/" fragment="projects">Check my work</a>
+            <a class="btn" routerLink="/" fragment="contact">Contact me</a>
+        </div>
+    </div>
+
+    <div class="hero__sides container">
+        <div class="hero__side">
+            <a class="hero__scroll" routerLink="/" fragment="about-me" aria-label="Scroll down">
+                <img src="assets/images/shared/icon-arrow-down.svg" alt="" />
+            </a>
+            <span class="hero__line hero__line--left"></span>
+        </div>
+
+        <div class="hero__side">
+            <a class="hero__email" href="mailto:svenapel@web.de">svenapel@web.de</a>
+            <div class="hero__icons">
+                <a href="https://github.com/SvenApelDev" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><img src="assets/images/shared/icon-github.svg" alt="" /></a>
+                <a href="LINKEDIN-URL" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="assets/images/shared/icon-linkedin.svg" alt="" /></a>
+            </div>
+            <span class="hero__line hero__line--right"></span>
+        </div>
+    </div>
+
+    <div class="hero__marquee" aria-hidden="true">
+        <div class="hero__marquee-track">
+            @for (item of [...marqueeItems, ...marqueeItems]; track $index) {
+                <span class="hero__marquee-item">{{ item }}</span>
+            }
+        </div>
     </div>
 </section>
