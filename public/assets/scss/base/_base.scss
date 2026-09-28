@@ -83,6 +83,18 @@ h6 {
   line-height: 1;
 }
 
+.section-label {
+  font-size: $font-size-section-label;
+  font-weight: $font-weight-medium;
+  color: $color-primary;
+}
+
+.section-title {
+  font-size: $font-size-section-title;
+  letter-spacing: -0.03em;
+  color: $color-primary;
+}
+
 // Layout
 
 .container {
