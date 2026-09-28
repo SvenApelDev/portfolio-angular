@@ -82,3 +82,16 @@ h6 {
   font-weight: $font-weight-bold;
   line-height: 1;
 }
+
+// Layout
+
+.container {
+  width: 100%;
+  max-width: $container-max-width;
+  margin-inline: auto;
+  padding-inline: $spacing-page;
+}
+
+section:not(.hero) {
+  padding-top: $spacing-section;
+}

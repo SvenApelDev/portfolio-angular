@@ -1,9 +1,12 @@
+@use 'sass:map';
+@use 'variables' as *;
 @use 'functions' as *;
 
 // Spacing - fluid(mobile, desktop)
 
 $spacing-page: fluid(16px, 96px);
+$spacing-section: fluid(100px, 144px);
 
-// Layout - fixed
+// Layout
 
-$content-max-width: 1248px;
+$container-max-width: map.get($breakpoints, desktop);
