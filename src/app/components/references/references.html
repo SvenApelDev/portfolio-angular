@@ -1,5 +1,42 @@
 <section class="references">
-    <div class="container">
-        <p>references works!</p>
+  <h2 class="references__title">What my colleagues say about me</h2>
+
+  <div class="references__slider">
+    <ul class="references__track">
+      @for (reference of references; track $index) {
+        <li class="references__card" [class.references__card--active]="$index === activeIndex">
+          @if ($index === activeIndex) {
+            <img class="references__quote" src="assets/images/references/icon-quotes.svg" alt="" />
+          }
+          <blockquote class="references__text">{{ reference.text }}</blockquote>
+          <p class="references__author">{{ reference.author }}</p>
+        </li>
+      }
+    </ul>
+  </div>
+
+  <div class="references__nav">
+    <button class="references__arrow" type="button" aria-label="Previous reference">
+      <img src="assets/images/references/icon-arrow-left.svg" alt="" />
+    </button>
+
+    <div class="references__dots">
+      @for (reference of references; track $index) {
+        <button
+          class="references__dot"
+          [class.references__dot--active]="$index === activeIndex"
+          type="button"
+          [attr.aria-label]="'Show reference ' + ($index + 1)"
+        ></button>
+      }
     </div>
+
+    <button
+      class="references__arrow references__arrow--next"
+      type="button"
+      aria-label="Next reference"
+    >
+      <img src="assets/images/references/icon-arrow-left.svg" alt="" />
+    </button>
+  </div>
 </section>
