@@ -1,0 +1,149 @@
+@use 'all-styles' as *;
+
+.contact__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 64px;
+}
+
+// Text
+
+.contact__box {
+    display: flex;
+    flex: 0 1 568px;
+    flex-direction: column;
+    gap: 40px;
+
+    background-color: #b65de03f;
+}
+
+.contact__header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact__more {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact__subheadline {
+    font-size: $font-size-subheadline;
+    line-height: 1.2;
+    color: $color-primary;
+}
+
+.contact__text {
+    font-size: $font-size-small;
+
+    strong {
+        font-weight: $font-weight-bold;
+        color: $color-primary;
+    }
+}
+
+// Form
+
+.contact__form {
+    display: flex;
+    flex: 0 1 616px;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #c4e05d3f;
+}
+
+.contact__fields {
+    width: 100%;
+    border-top: 1px solid $color-primary;
+
+    background-color: #3be4083f;
+}
+
+.contact__field {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 32px;
+    border-bottom: 1px solid $color-primary;
+}
+
+.contact__label {
+    font-family: $font-primary;
+    font-size: $font-size-form-label;
+    font-weight: $font-weight-medium;
+    line-height: 1.2;
+    color: $color-primary;
+}
+
+.contact__input {
+    margin: 3px;
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: $color-text;
+    line-height: 1.2;
+
+    &::placeholder {
+        color: $color-text-80;
+    }
+
+    &--message {
+        resize: none;
+    }
+}
+
+// Privacy
+
+.contact__privacy {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.contact__checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: $font-size-privacy;
+    cursor: pointer;
+
+    input {
+        flex-shrink: 0;
+        width: 18px;
+        height: 18px;
+        border: 2px solid $color-primary;
+        border-radius: 2px;
+        appearance: none;
+        cursor: pointer;
+    }
+
+    a {
+        padding-inline: 4px;
+        font-family: $font-primary;
+        color: $color-primary;
+    }
+}
+
+.contact__error {
+    font-size: $font-size-error;
+    color: $color-error-80;
+    visibility: hidden;
+}
+
+// Button
+
+.contact__btn {
+    margin-top: 16px;
+
+    &:disabled {
+        border-color: $color-text-50;
+        color: $color-text-80;
+        cursor: not-allowed;
+    }
+}
