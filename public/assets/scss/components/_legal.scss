@@ -1,0 +1,40 @@
+@use 'all-styles' as *;
+
+.legal {
+    min-height: 100vh;
+    padding-top: 150px;
+    background: linear-gradient(28deg, $color-background 31%, $color-gradient-end 97%);
+}
+
+.legal__title {
+    margin-bottom: 64px;
+    text-align: center;
+}
+
+.legal__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 968px;
+    margin-left: 120px;
+    font-size: $font-size-small;
+    color: $color-primary;
+
+    h2, h3 {
+        font-family: $font-secondary;
+        font-size: $font-size-legal-heading;
+        line-height: 1.2;
+        color: $color-text;
+    }
+
+    strong {
+        font-weight: $font-weight-regular;
+        color: $color-text;
+    }
+}
+
+.legal__block {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
