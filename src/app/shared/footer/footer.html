@@ -1,1 +1,24 @@
-<p>footer works!</p>
+<footer class="footer">
+  <div class="footer__inner container">
+    <div class="footer__brand">
+      <a class="footer__logo" routerLink="/" aria-label="Sven Apel, back to home">
+        <img src="assets/images/shared/logo-svenapel.svg" alt="" />
+      </a>
+      <div class="footer__info">
+        <p>Web Developer</p>
+        <p>Plauen Germany</p>
+      </div>
+    </div>
+    <p class="footer__copyright">© Sven Apel {{ year }}</p>
+    <ul class="footer__links">
+      <li>
+        <a href="https://github.com/SvenApelDev" target="_blank" rel="noopener noreferrer"
+          >GitHub</a
+        >
+      </li>
+      <li><a href="" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      <li><a href="mailto:svenapel@web.de">Email</a></li>
+      <li><a routerLink="/legal-notice">Legal Notice</a></li>
+    </ul>
+  </div>
+</footer>
