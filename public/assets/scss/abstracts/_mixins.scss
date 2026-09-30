@@ -3,7 +3,7 @@
 
 // Applies styles up to and including the given breakpoint
 @mixin respond($breakpoint) {
-    @media (max-width: map.get($brakpoints, $breakpoint)) {
+    @media (max-width: map.get($breakpoints, $breakpoint)) {
         @content;
     }
 }
