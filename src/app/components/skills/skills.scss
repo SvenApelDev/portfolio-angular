@@ -66,15 +66,17 @@
 // Grid
 
 .skills__grid {
-    display: grid;
-    grid-template-columns: repeat(4, 104px);
-    column-gap: 72px;
-    row-gap: 40px;
+    display: flex;
+    flex: 0 1 632px;
+    flex-wrap: wrap;
+    column-gap: fluid(24px, 72px);
+    row-gap: fluid(24px, 40px);
     margin-top: 48px;
 }
 
 .skills__item {
     display: flex;
+    flex: 0 0 fluid(80px, 104px);
     flex-direction: column;
     align-items: center;
     gap: 8px;
