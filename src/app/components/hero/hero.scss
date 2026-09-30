@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    overflow: hidden;
+    overflow-x: clip;
     background: linear-gradient(42deg, $color-background 36%, $color-gradient-end 93%);
 }
 
