@@ -14,7 +14,35 @@
     </nav>
 
     <a class="header__logo" routerLink="/" aria-label="Sven Apel, back to home">
-      <img src="assets/images/shared/logo-svenapel.svg" alt="" />
+      <picture>
+        <source media="(max-width: 390px)" srcset="assets/images/shared/icon-logo-mobile.svg" />
+        <img src="assets/images/shared/logo-svenapel.svg" alt="" />
+      </picture>
     </a>
+
+    <div class="header__menu-wrap">
+      <button class="header__burger" type="button" [attr.aria-label]="isMenuOpen ? 'Close menu' : 'Open menu'" [attr.aria-expanded]="isMenuOpen" aria-controls="mobile-menu" (click)="toggleMenu()">
+        <img [src]="isMenuOpen ? 'assets/images/shared/icon-menu-active.svg' : 'assets/images/shared/icon-menu.svg' " alt="" />
+      </button>
+
+      @if (isMenuOpen) {
+        <nav id="mobile-menu" class="header__menu" aria-label="Mobile navigation">
+          <ul class="header__menu-links">
+            <li><a routerLink="/" fragment="about-me" (click)="closeMenu()">About me</a></li>
+            <li><a routerLink="/" fragment="skills" (click)="closeMenu()">Skills</a></li>
+            <li><a routerLink="/" fragment="projects" (click)="closeMenu()">Projects</a></li>
+          </ul>
+
+          <div class="header__lang" role="group" aria-label="Language">
+            <button class="header__lang-btn header__lang-btn--active" type="button">EN</button>
+            <button class="header__lang-btn" type="button">DE</button>
+          </div>
+        </nav>
+      }
+    </div>
   </div>
+
+  @if (isMenuOpen) {
+    <div class="header__backdrop" (click)="closeMenu()"></div>
+  }
 </header>
