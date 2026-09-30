@@ -14,24 +14,18 @@
     flex: 0 1 568px;
     flex-direction: column;
     gap: 40px;
-
-    background-color: #b65de03f;
 }
 
 .contact__header {
     display: flex;
     flex-direction: column;
     gap: 20px;
-
-    background-color: #0829e43f;
 }
 
 .contact__more {
     display: flex;
     flex-direction: column;
     gap: 16px;
-
-    background-color: #0829e43f;
 }
 
 .contact__subheadline {
@@ -56,15 +50,11 @@
     flex: 0 1 616px;
     flex-direction: column;
     align-items: center;
-
-    background-color: #c4e05d3f;
 }
 
 .contact__fields {
     width: 100%;
     border-top: 1px solid $color-primary;
-
-    background-color: #3be4083f;
 }
 
 .contact__field {
@@ -73,8 +63,6 @@
     gap: 16px;
     padding: 32px;
     border-bottom: 1px solid $color-primary;
-
-    background-color: #0829e43f;
 }
 
 .contact__label {
@@ -83,8 +71,6 @@
     font-weight: $font-weight-medium;
     line-height: 1.2;
     color: $color-primary;
-
-    background-color: #0829e43f;
 }
 
 .contact__input {
@@ -94,8 +80,6 @@
     background: transparent;
     color: $color-text;
     line-height: 1.2;
-
-    background-color: #0829e43f;
 
     &::placeholder {
         color: $color-text-80;
@@ -114,8 +98,6 @@
     gap: 8px;
     width: 100%;
     margin-top: 40px;
-
-    background-color: #0829e43f;
 }
 
 .contact__checkbox {
