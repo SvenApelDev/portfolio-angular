@@ -37,7 +37,9 @@
 
 .hero__buttons {
     display: flex;
-    gap: 48px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: fluid(24px, 48px);
 }
 
 // Side bars
@@ -72,6 +74,10 @@
 .hero__email {
     writing-mode: vertical-rl;
     transform: rotate(180deg);
+
+    @include respond(mobile) {
+        display: none;
+    }
 }
 
 .hero__icons {
@@ -85,16 +91,24 @@
     }
 }
 
+.hero__mail {
+    display: none;
+
+    @include respond(mobile) {
+        display: block;
+    }
+}
+
 .hero__line {
     width: 1px;
 
     &--left {
-        height: 240px;
+        height: fluid(224px, 240px);
         background-color: $color-primary;
     }
 
     &--right {
-        height: 186px;
+        height: fluid(112px, 186px);
         background-color: $color-text;
     }
 }
@@ -112,6 +126,10 @@
     background-color: rgba($color-text, 0.12);
     backdrop-filter: blur(4px);
     transform: rotate(-3deg);
+
+    @include respond(mobile) {
+        bottom: 0;
+    }
 }
 
 .hero__marquee-track {
