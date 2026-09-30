@@ -8,7 +8,7 @@
 .footer__inner {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
 }
 
 // Left
@@ -43,10 +43,10 @@
 // Right
 
 .footer__links {
-  display: flex;
+  display: grid;
   flex: 1;
-  flex-direction: column;
-  align-items: flex-end;
+  justify-content: end;
+  justify-items: start;
   gap: 8px;
   font-size: $font-size-small;
 }
