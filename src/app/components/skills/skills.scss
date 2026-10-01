@@ -11,6 +11,11 @@
     justify-content: space-between;
     align-items: flex-start;
     gap: 96px;
+
+    @include respond(tablet) {
+        flex-direction: column;
+        gap: 40px;
+    }
 }
 
 // Box
@@ -20,6 +25,11 @@
     flex: 0 1 520px;
     flex-direction: column;
     gap: 20px;
+
+    @include respond(tablet) {
+        flex: none;
+        width: 100%;
+    }
 }
 
 .skills__card {
@@ -68,14 +78,19 @@
     display: flex;
     flex: 0 1 632px;
     flex-wrap: wrap;
-    column-gap: fluid(24px, 72px);
-    row-gap: fluid(24px, 40px);
+    column-gap: fluid(16px, 72px);
+    row-gap: fluid(32px, 40px);
     margin-top: 48px;
+
+    @include respond(tablet) {
+        flex: none;
+        margin-top: 0;
+    }
 }
 
 .skills__item {
     display: flex;
-    flex: 0 0 fluid(80px, 104px);
+    flex: 0 0 104px;
     flex-direction: column;
     align-items: center;
     gap: 8px;
