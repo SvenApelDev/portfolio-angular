@@ -9,6 +9,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include respond(small)  {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    row-gap: 32px;
+  }
 }
 
 // Left
@@ -38,6 +44,12 @@
   align-self: center;
   font-family: $font-primary;
   color: $color-primary;
+
+  @include respond(small) {
+    order: 3;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 // Right
