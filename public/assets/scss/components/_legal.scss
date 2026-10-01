@@ -7,8 +7,13 @@
 }
 
 .legal__title {
-    margin-bottom: 64px;
+    margin-bottom: fluid(32px, 64px);
+    font-size: fluid(32px, 64px);
     text-align: center;
+
+    @include respond(mobile) {
+        text-align: left;
+    }
 }
 
 .legal__content {
@@ -16,7 +21,7 @@
     flex-direction: column;
     gap: 24px;
     max-width: 968px;
-    margin-left: 120px;
+    margin-left: fluid(0px, 120px);
     font-size: $font-size-small;
     color: $color-primary;
 
