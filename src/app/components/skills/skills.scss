@@ -75,9 +75,10 @@
 // Grid
 
 .skills__grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 104px);
+    justify-content: center;
     flex: 0 1 632px;
-    flex-wrap: wrap;
     column-gap: fluid(16px, 72px);
     row-gap: fluid(32px, 40px);
     margin-top: 48px;
@@ -90,7 +91,6 @@
 
 .skills__item {
     display: flex;
-    flex: 0 0 104px;
     flex-direction: column;
     align-items: center;
     gap: 8px;
