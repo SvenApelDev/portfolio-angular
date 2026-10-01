@@ -11,4 +11,17 @@
     font-family: $font-secondary;
     font-size: $font-size-body;
     color: $color-text;
+    transition: border-color 0.2s ease;
+
+    &:hover:not(:disabled) {
+        border-color: $color-primary;
+
+        .btn__label {
+            transform: translateY(-1px);
+        }
+    }
+}
+
+.btn__label {
+    transition: transform 0.2s ease;
 }
