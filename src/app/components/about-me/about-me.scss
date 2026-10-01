@@ -5,10 +5,22 @@
     justify-content: flex-end;
     align-items: flex-start;
     gap: 96px;
+
+    @include respond(tablet) {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
 }
 
 .about-me__photo, .about-me__box {
     flex: 0 1 568px;
+
+    @include respond(tablet) {
+        flex: none;
+        width: 100%;
+        max-width: 568px;
+    }
 }
 
 .about-me__photo {
@@ -22,14 +34,18 @@
 .about-me__box {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: fluid(16px, 20px);
     margin-top: 98px;
+
+    @include respond(tablet) {
+        margin-top: 0;
+    }
 }
 
 .about-me__card {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: fluid(32px, 40px);
     padding: 32px;
     border: 1px solid $color-primary;
     border-radius: 30px;
