@@ -3,12 +3,12 @@
 .projects__header {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: fluid(16px, 20px);
 }
 
 .projects__intro {
     max-width: 456px;
-    margin-top: 41px;
+    margin-top: fluid(32px, 41px);
 }
 
 // List
@@ -25,9 +25,15 @@
     align-items: center;
     gap: 24px;
     width: 100%;
-    padding: 40px 32px;
+    padding: fluid(32px, 40px) fluid(0px, 32px);
     border-bottom: 1px solid $color-primary;
     text-align: left;
+
+    @include respond(mobile) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
 }
 
 .projects__title {
