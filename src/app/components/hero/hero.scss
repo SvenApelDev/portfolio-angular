@@ -82,6 +82,11 @@
 .hero__email {
     writing-mode: vertical-rl;
     transform: rotate(180deg);
+    transition: color 0.2s ease;
+
+    &:hover {
+        color: $color-primary;
+    }
 
     @include respond(mobile) {
         display: none;
@@ -92,10 +97,41 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+}
 
-    img {
-        width: 32px;
-        height: 32px;
+.hero__icon {
+    position: relative;
+    display: flex;
+    width: 32px;
+    height: 32px;
+}
+
+.hero__icon-default {
+    width: 32px;
+    height: 32px;
+}
+
+.hero__icon-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 44px;
+    max-width: none;
+    height: 32px;
+    opacity: 0;
+}
+
+.hero__icon-default, .hero__icon-hover {
+    transition: opacity 0.2s ease;
+}
+
+.hero__icon:hover {
+    .hero__icon-default {
+        opacity: 0;
+    }
+
+    .hero__icon-hover {
+        opacity: 1;
     }
 }
 
@@ -103,7 +139,7 @@
     display: none;
 
     @include respond(mobile) {
-        display: block;
+        display: flex;
     }
 }
 
