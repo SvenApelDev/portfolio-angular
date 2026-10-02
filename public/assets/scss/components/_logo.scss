@@ -1,0 +1,32 @@
+.logo {
+    position: relative;
+    display: flex;
+}
+
+.logo__default, .logo__hover {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.logo__default {
+    display: flex;
+}
+
+.logo__hover {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.logo:hover {
+    .logo__default {
+        opacity: 0;
+        transform: translateY(-1px);
+    }
+
+    .logo__hover {
+        opacity: 1;
+        transform: translateY(-1px);
+    }
+}

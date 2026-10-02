@@ -46,6 +46,16 @@
       width: 33px;
     }
   }
+
+  @include respond(mobile) {
+    .logo__hover {
+      display: none;
+    }
+
+    &:hover .logo__default {
+      opacity: 1;
+    }
+  }
 }
 
 .header__links {
