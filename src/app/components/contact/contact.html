@@ -16,7 +16,7 @@
       </div>
     </div>
 
-    <form class="contact__form" novalidate>
+    <form class="contact__form" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" novalidate>
       <div class="contact__fields">
         <div class="contact__field">
           <label class="contact__label" for="contact-name">What's your name?</label>
@@ -25,7 +25,24 @@
             id="contact-name"
             type="text"
             placeholder="Your name goes here"
+            name="name"
+            [(ngModel)]="contactData.name"
+            [ngModelOptions]="{ updateOn: 'blur' }"
+            #nameField="ngModel"
+            (keydown.enter)="onEnter($event)"
+            required
+            minlength="2"
+            pattern="[A-Za-zÀ-ÖØ-öø-ÿ' \-]+"
           />
+          <p class="contact__error">
+            @if (nameField.touched && nameField.errors?.['required']) {
+              Please enter your name.
+            } @else if (nameField.touched && nameField.errors?.['minlength']) {
+              Your name must be at least 2 characters.
+            } @else if (nameField.touched && nameField.errors?.['pattern']) {
+              Please use letters only.
+            }
+          </p>
         </div>
 
         <div class="contact__field">
@@ -35,7 +52,22 @@
             id="contact-email"
             type="email"
             placeholder="youremail@email.com"
+            name="email"
+            [(ngModel)]="contactData.email"
+            [ngModelOptions]="{ updateOn: 'blur' }"
+            #emailField="ngModel"
+            (keydown.enter)="onEnter($event)"
+            required
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
           />
+
+          <p class="contact__error">
+            @if (emailField.touched && emailField.errors?.['required']) {
+              Please enter your email.
+            } @else if (emailField.touched && emailField.errors?.['pattern']) {
+              Please enter a valid email address.
+            }
+          </p>
         </div>
 
         <div class="contact__field">
@@ -44,22 +76,51 @@
             class="contact__input contact__input--message"
             id="contact-message"
             rows="1"
-            placeholder="Hello Lukas, I am interested in..."
+            placeholder="Hello Sven, I am interested in..."
+            name="message"
+            [(ngModel)]="contactData.message"
+            [ngModelOptions]="{ updateOn: 'blur' }"
+            #messageField="ngModel"
+            (input)="autoResize($event)"
+            required
+            minlength="10"
           ></textarea>
+
+          <p class="contact__error">
+            @if (messageField.touched && messageField.errors?.['required']) {
+              What do you need to develop?
+            } @else if (messageField.touched && messageField.errors?.['minlength']) {
+              Your message must be at least 10 characters.
+            }
+          </p>
         </div>
       </div>
 
       <div class="contact__privacy">
         <label class="contact__checkbox">
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            name="privacy"
+            [(ngModel)]="contactData.privacy"
+            #privacyField="ngModel"
+            required
+          />
           <span>
             I've read the <a routerLink="/privacy-policy">privacy policy</a> and agree to the
             processing of my data as outlined.
           </span>
         </label>
-        <p class="contact__error">Please accept the privacy policy.</p>
+
+        <p class="contact__error">
+          @if (privacyField.invalid && (privacyField.touched || privacyField.dirty)) {
+            Please accept the privacy policy.
+          }
+        </p>
       </div>
-      <button class="btn contact__btn" type="submit" disabled><span class="btn__label">Say Hello ;)</span></button>
+
+      <button class="btn contact__btn" type="submit" [disabled]="contactForm.invalid">
+        <span class="btn__label">Say Hello ;)</span>
+      </button>
     </form>
   </div>
 </section>

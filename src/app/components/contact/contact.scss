@@ -124,12 +124,27 @@
 
     input {
         flex-shrink: 0;
-        width: 18px;
-        height: 18px;
-        border: 2px solid $color-primary;
-        border-radius: 2px;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
         appearance: none;
         cursor: pointer;
+        background: url('../../../../public/assets/images/contact/icon-unchecked.svg');
+        transition: background-color 0.2s ease;
+
+        &:hover {
+            background-color: $color-primary-30;
+        }
+
+        &:checked {
+            background: url('../../../../public/assets/images/contact/icon-checked.svg');
+        }
+
+        &--message {
+            resize: none;
+            max-height: calc(1.2em * 6);
+            overflow-y: auto;
+        }
     }
 
     a {
@@ -140,9 +155,10 @@
 }
 
 .contact__error {
+    min-height: 1.2em;
     font-size: $font-size-error;
+    line-height: 1.2;
     color: $color-error-80;
-    visibility: hidden;
 }
 
 // Button
