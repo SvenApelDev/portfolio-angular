@@ -1,206 +1,214 @@
 @use 'all-styles' as *;
 
 .hero {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    overflow-x: clip;
-    background: linear-gradient(42deg, $color-background 36%, $color-gradient-end 93%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow-x: clip;
+  background: linear-gradient(42deg, $color-background 36%, $color-gradient-end 93%);
 }
 
 // Title and Buttons
 
 .hero__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .hero__subtitle {
-    margin-bottom: 12px;
-    font-family: $font-primary;
-    font-size: $font-size-hero-subtitle;
-    line-height: 1;
-    color: $color-hero-text;
+  margin-bottom: 12px;
+  font-family: $font-primary;
+  font-size: $font-size-hero-subtitle;
+  line-height: 1;
+  color: $color-hero-text;
 }
 
 .hero__name {
-    margin-bottom: 40px;
-    font-family: $font-secondary;
-    font-size: $font-size-hero-name;
-    letter-spacing: -0.02em;
-    color: $color-hero-text;
+  margin-bottom: 40px;
+  font-family: $font-secondary;
+  font-size: $font-size-hero-name;
+  letter-spacing: -0.02em;
+  color: $color-hero-text;
 }
 
 .hero__buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: fluid(24px, 48px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: fluid(24px, 48px);
 }
 
 // Side bars
 
 .hero__sides {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    pointer-events: none;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  pointer-events: none;
 }
 
 .hero__side {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-    pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  pointer-events: auto;
 }
 
 .hero__scroll {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 48px;
-    border: 1px solid $color-primary;
-    border-radius: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 48px;
+  border: 1px solid $color-primary;
+  border-radius: 32px;
 
-    img {
-        transition: transform 0.3s ease;
-    }
+  img {
+    transition: transform 0.3s ease;
+  }
 
-    &:hover img {
-        transform: translateY(6px);
-    }
+  &:hover img {
+    transform: translateY(6px);
+  }
 }
 
 .hero__email {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    transition: color 0.2s ease;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  transition: color 0.2s ease;
 
-    &:hover {
-        color: $color-primary;
-    }
+  &:hover {
+    color: $color-primary;
+  }
 
-    @include respond(mobile) {
-        display: none;
-    }
+  @include respond(mobile) {
+    display: none;
+  }
 }
 
 .hero__icons {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .hero__icon {
-    position: relative;
-    display: flex;
-    width: 32px;
-    height: 32px;
+  position: relative;
+  display: flex;
+  width: 32px;
+  height: 32px;
 }
 
 .hero__icon-default {
-    width: 32px;
-    height: 32px;
+  width: 32px;
+  height: 32px;
 }
 
 .hero__icon-hover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 44px;
-    max-width: none;
-    height: 32px;
-    opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 44px;
+  max-width: none;
+  height: 32px;
+  opacity: 0;
 }
 
-.hero__icon-default, .hero__icon-hover {
-    transition: opacity 0.2s ease;
+.hero__icon-default,
+.hero__icon-hover {
+  transition: opacity 0.2s ease;
 }
 
 .hero__icon:hover {
-    .hero__icon-default {
-        opacity: 0;
-    }
+  .hero__icon-default {
+    opacity: 0;
+  }
 
-    .hero__icon-hover {
-        opacity: 1;
-    }
+  .hero__icon-hover {
+    opacity: 1;
+  }
 }
 
 .hero__mail {
-    display: none;
+  display: none;
 
-    @include respond(mobile) {
-        display: flex;
-    }
+  @include respond(mobile) {
+    display: flex;
+  }
 }
 
 .hero__line {
-    width: 1px;
+  width: 1px;
 
-    &--left {
-        height: fluid(224px, 240px);
-        background-color: $color-primary;
-    }
+  &--left {
+    height: fluid(224px, 240px);
+    background-color: $color-primary;
+  }
 
-    &--right {
-        height: fluid(112px, 186px);
-        background-color: $color-text;
-    }
+  &--right {
+    height: fluid(112px, 186px);
+    background-color: $color-text;
+  }
 }
 
 // Marquee
 
 .hero__marquee {
-    position: absolute;
-    bottom: 90px;
-    left: -2%;
-    z-index: 1;
-    width: 104%;
-    padding: 12px 32px;
-    overflow: hidden;
-    background-color: rgba($color-text, 0.12);
-    backdrop-filter: blur(4px);
-    transform: rotate(-3deg);
+  position: absolute;
+  bottom: 90px;
+  left: -2%;
+  z-index: 1;
+  width: 104%;
+  padding: 12px 32px;
+  overflow: hidden;
+  background-color: rgba($color-text, 0.12);
+  backdrop-filter: blur(4px);
+  transform: rotate(-3deg);
 
-    @include respond(mobile) {
-        bottom: 0;
-    }
+  @include respond(mobile) {
+    bottom: 0;
+  }
 }
 
 .hero__marquee-track {
-    display: flex;
-    align-items: center;
-    gap: 56px;
-    width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  width: max-content;
+  padding-right: 56px;
+  animation: marquee 20s linear infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
 }
 
 .hero__marquee-item {
-    display: flex;
-    align-items: center;
-    gap: 56px;
-    font-size: $font-size-marquee;
-    white-space: nowrap;
-    color: $color-primary;
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  font-size: $font-size-marquee;
+  white-space: nowrap;
+  color: $color-primary;
 
-    &::before {
-        content: '';
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background-color: $color-primary;
-    }
+  &::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $color-primary;
+  }
 }
 
-
-
-
-
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
