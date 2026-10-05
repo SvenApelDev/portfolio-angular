@@ -1,33 +1,54 @@
 <section class="references">
   <h2 class="references__title">What my colleagues say about me</h2>
 
-  <div class="references__slider">
-    <ul class="references__track">
-      @for (reference of references; track $index) {
-        <li class="references__card" [class.references__card--active]="$index === activeIndex">
-          @if ($index === activeIndex) {
+  <div
+    class="references__slider"
+    tabindex="0"
+    aria-roledescription="carousel"
+    aria-label="References"
+    (keydown.arrowleft)="prev()"
+    (keydown.arrowright)="next()"
+    (touchstart)="onTouchStart($event)"
+    (touchend)="onTouchEnd($event)"
+  >
+    <div
+      class="references__track"
+      [class.references__track--instant]="!hasTransition()"
+      [style.--pos]="position()"
+      (transitionend)="onTransitionEnd($event)"
+    >
+      @for (reference of slides; track $index) {
+        <article
+          class="references__card"
+          [class.references__card--active]="$index === position()"
+          [attr.aria-hidden]="$index !== position()"
+        >
+          @if ($index === position()) {
             <img class="references__quote" src="assets/images/references/icon-quotes.svg" alt="" />
           }
           <blockquote class="references__text">{{ reference.text }}</blockquote>
           <p class="references__author">{{ reference.author }}</p>
-        </li>
+        </article>
       }
-    </ul>
+    </div>
   </div>
 
   <div class="references__nav">
-    <button class="references__arrow" type="button" aria-label="Previous reference">
+    <button
+      class="references__arrow"
+      type="button"
+      aria-label="Previous reference"
+      (click)="prev()"
+    >
       <img src="assets/images/shared/icon-arrow-left.svg" alt="" />
     </button>
 
-    <div class="references__dots">
+    <div class="references__dots" aria-hidden="true">
       @for (reference of references; track $index) {
-        <button
+        <span
           class="references__dot"
-          [class.references__dot--active]="$index === activeIndex"
-          type="button"
-          [attr.aria-label]="'Show reference ' + ($index + 1)"
-        ></button>
+          [class.references__dot--active]="$index === activeIndex()"
+        ></span>
       }
     </div>
 
@@ -35,6 +56,7 @@
       class="references__arrow references__arrow--next"
       type="button"
       aria-label="Next reference"
+      (click)="next()"
     >
       <img src="assets/images/shared/icon-arrow-left.svg" alt="" />
     </button>

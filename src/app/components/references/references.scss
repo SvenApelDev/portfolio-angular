@@ -12,11 +12,19 @@
 // Slider
 
 .references__slider {
+  --card-width: min(632px, calc(100vw - 2 * #{$spacing-page}));
+  --gap: #{fluid(8px, 64px)};
   padding-top: 8px;
   max-width: $container-max-width;
   margin-inline: auto;
   overflow-x: clip;
   mask-image: linear-gradient(to right, transparent 0%, #000 10%, #000 90%, transparent 100%);
+  touch-action: pan-y;
+
+  &:focus-visible {
+    outline: 2px solid $color-primary;
+    outline-offset: 4px;
+  }
 
   @include respond(mobile) {
     mask-image: none;
@@ -24,30 +32,43 @@
 }
 
 .references__track {
+  position: relative;
+  left: 50%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: fluid(8px, 64px);
+  gap: var(--gap);
+  width: max-content;
+  transform: translateX(
+    calc(-1 * (var(--pos) * (var(--card-width) + var(--gap)) + var(--card-width) / 2))
+  );
+  transition: transform 0.5s ease;
+
+  &--instant {
+    transition: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition-duration: 1ms;
+  }
 }
 
 .references__card {
   position: relative;
   display: flex;
   flex: none;
-  width: min(632px, calc(100% - 2 * #{$spacing-page}));
+  width: var(--card-width);
   flex-direction: column;
   gap: 44px;
   padding: 35px 40px;
   border: 1px solid $color-primary;
   border-radius: 32px;
   background-color: $color-primary-10;
+  transition: background-color 0.5s ease;
 
   @include respond(mobile) {
     padding: 40px;
   }
 
   &--active {
-    padding-block: fluid(40px, 48px);
     background-color: $color-primary-30;
   }
 }
@@ -73,6 +94,7 @@
   display: flex;
   align-items: center;
   gap: 16px;
+  margin-top: auto;
 
   &::before {
     content: '';
@@ -115,6 +137,7 @@
 }
 
 .references__dot {
+  display: block;
   width: 8px;
   height: 8px;
   border-radius: 50%;
