@@ -1,25 +1,55 @@
 <section id="projects" class="projects">
-    <div class="container">
-        <div class="projects__header">
-            <p class="section-label">Portfolio</p>
-            <h2 class="section-title">Featured Projects</h2>
-        </div>
-
-        <p class="projects__intro">Explore a selection of my work here - Interact with projects to see my skills in action.</p>
-
-        <ul class="projects__list">
-            @for (project of projects; track project.title) {
-                <li>
-                    <button class="projects__row" type="button">
-                        <span class="projects__title">{{ project.title }}</span>
-                        <span class="projects__tech">
-                            @for (tech of project.technologies; track tech) {
-                                <span>{{ tech }}</span>
-                            }
-                        </span>
-                    </button>
-                </li>
-            }
-        </ul>
+  <div class="container">
+    <div class="projects__header">
+      <p class="section-label">Portfolio</p>
+      <h2 class="section-title">Featured Projects</h2>
     </div>
+
+    <p class="projects__intro">
+      Explore a selection of my work here - Interact with projects to see my skills in action.
+    </p>
+
+    <ul class="projects__list">
+      @for (project of projects; track project.title) {
+        <li class="projects__item">
+          <button class="projects__row" type="button" (click)="open($index, dialog)">
+            <span class="projects__title">
+              {{ project.title }}
+              <img
+                class="projects__arrow"
+                src="assets/images/projects/icon-arrow-outward.svg"
+                alt=""
+              />
+            </span>
+            <span class="projects__tech">
+              @for (tech of project.technologies; track tech) {
+                <span>{{ tech }}</span>
+              }
+            </span>
+            <img class="projects__preview" [src]="project.image" alt="" />
+          </button>
+        </li>
+      }
+    </ul>
+  </div>
+
+  <dialog #dialog class="project-dialog" (click)="onDialogClick($event, dialog)">
+    <div class="project-dialog__content">
+      <div class="project-dialog__info">
+        <span class="project-dialog__number">0{{ selectedIndex() + 1 }}</span>
+        <h3 class="project-dialog__title">{{ selectedProject().title }}</h3>
+        <p class="project-dialog__subtitle">What is this project about?</p>
+        <p class="project-dialog__text">{{ selectedProject().description }}</p>
+
+        <ul class="project-dialog__tech">
+          @for (tech of selectedProject().technologies; track tech) {
+            <li>
+              <img [src]="'assets/images/projects/tech/' + tech.toLowerCase() + '.svg'" alt="" />
+              {{ tech }}
+            </li>
+          }
+        </ul>
+      </div>
+    </div>
+  </dialog>
 </section>
