@@ -82,6 +82,10 @@ body {
   overflow: hidden;
 }
 
+html:has(dialog[open]) {
+  overflow: hidden;
+}
+
 // Typography
 
 h1,

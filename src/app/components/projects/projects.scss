@@ -1,56 +1,243 @@
 @use 'all-styles' as *;
 
 .projects__header {
-    display: flex;
-    flex-direction: column;
-    gap: fluid(16px, 20px);
+  display: flex;
+  flex-direction: column;
+  gap: fluid(16px, 20px);
 }
 
 .projects__intro {
-    max-width: 456px;
-    margin-top: fluid(32px, 41px);
+  max-width: 456px;
+  margin-top: fluid(32px, 41px);
 }
 
 // List
 
 .projects__list {
-    max-width: 880px;
-    margin-top: 41px;
-    border-top: 1px solid $color-primary;
+  max-width: 880px;
+  margin-top: 41px;
+  border-top: 1px solid $color-primary;
 }
 
 .projects__row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 24px;
-    width: 100%;
-    padding: fluid(32px, 40px) fluid(0px, 32px);
-    border-bottom: 1px solid $color-primary;
-    text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  padding: fluid(32px, 40px) fluid(0px, 32px);
+  border-bottom: 1px solid $color-primary;
+  text-align: left;
 
-    @include respond(mobile) {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
+  @include respond(mobile) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
 }
 
 .projects__title {
-    font-family: $font-primary;
-    font-size: $font-size-project-title;
-    font-weight: $font-weight-bold;
-    line-height: 1.2;
+  font-family: $font-primary;
+  font-size: $font-size-project-title;
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
 }
 
 .projects__tech {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
 
-    span + span::before {
-        content: '|';
-        margin-right: 4px;
-        color: $color-primary;
-    }
+  span + span::before {
+    content: '|';
+    margin-right: 4px;
+    color: $color-primary;
+  }
+}
+
+// Preview (temprary until hover preview)
+
+.projects__preview {
+  display: none;
+}
+
+// Dialog
+
+.project-dialog {
+  width: min(1248px, calc(100% - 32px));
+  max-width: none;
+  margin: auto;
+  padding: 0;
+  border: 1px solid $color-primary;
+  border-radius: 30px;
+  background: linear-gradient(37deg, $color-background 36%, $color-gradient-end 93%);
+  color: $color-text;
+
+  &::backdrop {
+    background-color: $color-black-60;
+  }
+
+  @include respond(mobile) {
+    width: calc(100% - 24px);
+    border-radius: 20px;
+    background: linear-gradient(73deg, $color-background 36%, $color-gradient-end 93%);
+  }
+}
+
+.project-dialog__content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 48px;
+  padding: 80px;
+
+  @include respond(tablet) {
+    flex-direction: column;
+    gap: 32px;
+    padding: 95px 24px 96px;
+  }
+
+  @include respond(mobile) {
+    padding: 95px 12px 96px;
+  }
+}
+
+.project-dialog__close {
+  position: absolute;
+  top: 55px;
+  right: 80px;
+  width: 48px;
+  height: 48px;
+
+  @include respond(tablet) {
+    top: 15px;
+    right: 15px;
+  }
+}
+
+.project-dialog__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 0 1 480px;
+
+  @include respond(tablet) {
+    flex-basis: auto;
+    width: 100%;
+  }
+}
+
+.project-dialog__number {
+  font-size: fluid(72px, 128px);
+  font-weight: $font-weight-bold;
+  line-height: 0.78;
+  letter-spacing: -0.02em;
+  color: $color-primary;
+
+  @include respond(mobile) {
+    line-height: 1;
+  }
+}
+
+.project-dialog__title {
+  margin-top: fluid(8px, 24px);
+  font-size: $font-size-section-title;
+  line-height: 0.8;
+  letter-spacing: -0.03em;
+}
+
+.project-dialog__subtitle {
+  margin-top: fluid(32px, 40px);
+  font-family: $font-primary;
+  font-size: $font-size-subheadline;
+  font-weight: $font-weight-bold;
+  color: $color-primary;
+}
+
+.project-dialog__text {
+  margin-top: fluid(16px, 20px);
+  font-size: fluid(16px, 18px);
+}
+
+.project-dialog__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+  margin-top: fluid(20px, 32px);
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: $font-size-small;
+  }
+
+  img {
+    width: fluid(20px, 24px);
+    height: fluid(20px, 24px);
+  }
+}
+
+.project-dialog__links {
+  display: flex;
+  gap: 32px;
+  margin-top: fluid(32px, 40px);
+
+  .btn {
+    gap: 4px;
+  }
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+
+  @include respond(mobile) {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.project-dialog__media {
+  flex: 0 1 520px;
+
+  @include respond(tablet) {
+    order: -1;
+    flex-basis: auto;
+    width: 100%;
+  }
+}
+
+.project-dialog__image {
+  width: 100%;
+  aspect-ratio: 520 / 370;
+  object-fit: cover;
+  border-radius: 30px;
+
+  @include respond(mobile) {
+    aspect-ratio: 342 /216;
+    border-radius: 16px;
+  }
+}
+
+.project-dialog__next {
+  position: absolute;
+  right: 83px;
+  bottom: 54px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: fluid(16px, 18px);
+  color: $color-primary;
+
+  img {
+    width: 32px;
+    height: 32px;
+  }
+
+  @include respond(tablet) {
+    right: 15px;
+    bottom: 29px;
+  }
 }
