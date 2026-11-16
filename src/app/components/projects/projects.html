@@ -52,7 +52,7 @@
         <ul class="project-dialog__tech">
           @for (tech of selectedProject().technologies; track tech) {
             <li>
-              <img [src]="'assets/images/projects/icon-tech-/' + tech.toLowerCase() + '.svg'" alt="" />
+              <img [src]="'assets/images/projects/icon-tech-' + tech.toLowerCase() + '.svg'" alt="" />
               {{ tech }}
             </li>
           }

@@ -10,9 +10,9 @@ export interface Project {
 export const PROJECTS: Project[] = [
   {
     title: 'Join',
-    technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
+    technologies: ['CSS', 'HTML', 'TypeScript', 'Angular', 'Supabase'],
     description:
-      'Task manager inspired by the Kanban system. Create and organize tasks using drag and drop functions, assign users and categories.',
+      'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
     image: 'assets/images/projects/join.png',
     github: '#',
     live: '#',
