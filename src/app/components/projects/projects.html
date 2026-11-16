@@ -41,7 +41,16 @@
         aria-label="Close dialog"
         (click)="dialog.close()"
       >
-        <img src="assets/images/projects/icon-close.svg" alt="" />
+        <img
+          class="project-dialog__close-default"
+          src="assets/images/projects/icon-close.svg"
+          alt=""
+        />
+        <img
+          class="project-dialog__close-hover"
+          src="assets/images/projects/icon-close-hover.svg"
+          alt=""
+        />
       </button>
       <div class="project-dialog__info">
         <span class="project-dialog__number">0{{ selectedIndex() + 1 }}</span>
@@ -52,7 +61,10 @@
         <ul class="project-dialog__tech">
           @for (tech of selectedProject().technologies; track tech) {
             <li>
-              <img [src]="'assets/images/projects/icon-tech-' + tech.toLowerCase() + '.svg'" alt="" />
+              <img
+                [src]="'assets/images/projects/icon-tech-' + tech.toLowerCase() + '.svg'"
+                alt=""
+              />
               {{ tech }}
             </li>
           }
@@ -81,7 +93,18 @@
         />
         <button class="project-dialog__next" type="button" (click)="nextProject()">
           Next project
-          <img src="assets/images/projects/icon-arrow-forward.svg" alt="" />
+          <span class="project-dialog__next-icon">
+            <img
+              class="project-dialog__next-default"
+              src="assets/images/projects/icon-arrow-forward.svg"
+              alt=""
+            />
+            <img
+              class="project-dialog__next-hover"
+              src="assets/images/projects/icon-arrow-forward-hover.svg"
+              alt=""
+            />
+          </span>
         </button>
       </div>
     </div>
