@@ -14,9 +14,15 @@
 // List
 
 .projects__list {
-  max-width: 880px;
+  --preview-width: clamp(200px, 20.5vw, 296px);
+  width: min(880px, calc(100% - 72px - var(--preview-width)));
   margin-top: 41px;
   border-top: 1px solid $color-primary;
+
+  @include respond(tablet) {
+    width: auto;
+    max-width: 880px;
+  }
 }
 
 .projects__row {
@@ -39,17 +45,17 @@
 }
 
 .projects__row:hover {
-    background-color: $color-primary-30;
+  background-color: $color-primary-30;
 
-    .projects__arrow {
-        opacity: 1;
-    }
+  .projects__arrow {
+    opacity: 1;
+  }
 }
 
 .projects__title {
-    display: flex;
-    align-items: center;
-    gap: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
   font-family: $font-primary;
   font-size: $font-size-project-title;
   font-weight: $font-weight-bold;
@@ -57,10 +63,10 @@
 }
 
 .projects__arrow {
-    width: 23px;
-    height: 23px;
-    opacity: 0;
-    transition: opacity 0.2s ease;
+  width: 23px;
+  height: 23px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
 }
 
 .projects__tech {
@@ -78,39 +84,41 @@
 // Preview
 
 .projects__preview {
-    position: absolute;
-    top: 50%;
-    left: calc(100% + 72px);
-    z-index: 1;
-    width: 296px;
-    height: 192px;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-50%);
-    transition: opacity 0.2s ease;
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 72px);
+  z-index: 1;
+  width: var(--preview-width);
+  aspect-ratio: 296 / 192;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: opacity 0.2s ease;
 
-    @include respond(large) {
-        display: none;
-    }
+  @include respond(tablet) {
+    display: none;
+  }
 }
 
 .projects__preview-pattern {
-    position: absolute;
-    top: 20px;
-    left: 24px;
-    width: 292px;
-    height: 192px;
+  position: absolute;
+  top: 10.4%;
+  left: 8.1%;
+  width: 98.6%;
+  height: 100%;
 }
 
 .projects__preview-image {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 16px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
 }
 
-.projects__row:hover .projects__
+.projects__row:hover .projects__preview {
+  opacity: 1;
+}
 
 // Dialog
 
@@ -259,7 +267,9 @@
 
   .btn {
     gap: 4px;
-    transition: border-color 0.2s ease, color 0.2s ease;
+    transition:
+      border-color 0.2s ease,
+      color 0.2s ease;
   }
 
   img {
@@ -272,11 +282,11 @@
     color: $color-primary;
 
     img {
-        transform: translate(2px, -2px);
+      transform: translate(2px, -2px);
     }
 
     .btn__label {
-        transform: none;
+      transform: none;
     }
   }
 
