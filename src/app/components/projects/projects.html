@@ -17,7 +17,7 @@
               {{ project.title }}
               <img
                 class="projects__arrow"
-                src="assets/images/projects/icon-arrow-outward.svg"
+                src="assets/images/projects/arrow-outward-white.svg"
                 alt=""
               />
             </span>
@@ -26,7 +26,14 @@
                 <span>{{ tech }}</span>
               }
             </span>
-            <img class="projects__preview" [src]="project.image" alt="" />
+            <span class="projects__preview">
+              <img
+                class="projects__preview-pattern"
+                src="assets/images/projects/preview-pattern.svg"
+                alt=""
+              />
+              <img class="projects__preview-image" [src]="project.image" alt="" />
+            </span>
           </button>
         </li>
       }

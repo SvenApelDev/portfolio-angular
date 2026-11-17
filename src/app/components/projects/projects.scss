@@ -28,6 +28,8 @@
   padding: fluid(32px, 40px) fluid(0px, 32px);
   border-bottom: 1px solid $color-primary;
   text-align: left;
+  position: relative;
+  transition: background-color 0.2s ease;
 
   @include respond(mobile) {
     flex-direction: column;
@@ -36,11 +38,29 @@
   }
 }
 
+.projects__row:hover {
+    background-color: $color-primary-30;
+
+    .projects__arrow {
+        opacity: 1;
+    }
+}
+
 .projects__title {
+    display: flex;
+    align-items: center;
+    gap: 4px;
   font-family: $font-primary;
   font-size: $font-size-project-title;
   font-weight: $font-weight-bold;
   line-height: 1.2;
+}
+
+.projects__arrow {
+    width: 23px;
+    height: 23px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
 }
 
 .projects__tech {
@@ -55,11 +75,42 @@
   }
 }
 
-// Preview (temprary until hover preview)
+// Preview
 
 .projects__preview {
-  display: none;
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 72px);
+    z-index: 1;
+    width: 296px;
+    height: 192px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: opacity 0.2s ease;
+
+    @include respond(large) {
+        display: none;
+    }
 }
+
+.projects__preview-pattern {
+    position: absolute;
+    top: 20px;
+    left: 24px;
+    width: 292px;
+    height: 192px;
+}
+
+.projects__preview-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.projects__row:hover .projects__
 
 // Dialog
 
