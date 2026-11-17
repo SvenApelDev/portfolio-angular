@@ -13,7 +13,7 @@
   }
 }
 
-.about-me__photo,
+.about-me__photo-wrapper,
 .about-me__box {
   flex: 0 1 568px;
 
@@ -30,6 +30,23 @@
   aspect-ratio: 1;
   border-radius: 30px;
   object-fit: cover;
+  position: relative;
+}
+
+.about-me__photo-wrapper {
+  position: relative;
+}
+
+.about-me__pattern {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: translate(-8.1%, 5.28%);
+
+  @include respond(small) {
+    display: none;
+  }
 }
 
 .about-me__box {
@@ -39,6 +56,10 @@
   margin-top: 98px;
 
   @include respond(tablet) {
+    margin-top: 30px;
+  }
+
+  @include respond(small) {
     margin-top: 0;
   }
 }
