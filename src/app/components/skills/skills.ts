@@ -15,7 +15,7 @@ export class Skills {
     { name: 'Material Design', icon: 'icon-material-design.svg' },
     { name: 'TypeScript', icon: 'icon-typescript.svg' },
     { name: 'Angular', icon: 'icon-angular.svg' },
-    { name: 'Supabas', icon: 'icon-supabase.svg' },
+    { name: 'Supabase', icon: 'icon-supabase.svg' },
     { name: 'Git', icon: 'icon-git.svg' },
     { name: 'REST-API', icon: 'icon-rest-api.svg' },
     { name: 'Scrum', icon: 'icon-scrum.svg' },
