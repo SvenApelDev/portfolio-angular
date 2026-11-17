@@ -1,114 +1,203 @@
 @use 'all-styles' as *;
 
 .skills {
-    background: radial-gradient(
-        circle 340px at 1% 52%, rgba($color-gradient-end, 0.3) 0%, $color-background 100%
-    );
+  background: radial-gradient(
+    circle 340px at 1% 52%,
+    rgba($color-gradient-end, 0.3) 0%,
+    $color-background 100%
+  );
 }
 
 .skills__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 96px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 96px;
 
-    @include respond(tablet) {
-        flex-direction: column;
-        gap: 40px;
-    }
+  @include respond(tablet) {
+    flex-direction: column;
+    gap: 40px;
+  }
 }
 
 // Box
 
 .skills__box {
-    display: flex;
-    flex: 0 1 520px;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex: 0 1 520px;
+  flex-direction: column;
+  gap: 20px;
 
-    @include respond(tablet) {
-        flex: none;
-        width: 100%;
-    }
+  @include respond(tablet) {
+    flex: none;
+    width: 100%;
+  }
 }
 
 .skills__card {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 40px;
-    padding: 32px;
-    border: 1px solid $color-primary;
-    border-radius: 30px;
-    background-color: $color-primary-10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 32px;
+  border: 1px solid $color-primary;
+  border-radius: 30px;
+  background-color: $color-primary-10;
 }
 
 .skills__text {
-    margin-bottom: -8px;
+  margin-bottom: -8px;
 }
 
 .skills__more {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .skills__subheadline {
-    font-size: $font-size-subheadline;
-    line-height: 1.2;
+  font-size: $font-size-subheadline;
+  line-height: 1.2;
 
-    span {
-        color: $color-primary;
-    }
+  span {
+    color: $color-primary;
+  }
 }
 
 .skills__small {
-    font-size: $font-size-small;
+  font-size: $font-size-small;
 }
 
 .skills__btn {
-    font-size: $font-size-small;
-    font-weight: $font-weight-bold;
-    color: $color-primary;
+  font-size: $font-size-small;
+  font-weight: $font-weight-bold;
+  color: $color-primary;
 }
 
 // Grid
 
 .skills__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 104px);
-    justify-content: center;
-    flex: 0 1 632px;
-    column-gap: fluid(16px, 72px);
-    row-gap: fluid(32px, 40px);
-    margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 104px);
+  justify-content: center;
+  flex: 0 1 632px;
+  column-gap: fluid(16px, 72px);
+  row-gap: fluid(32px, 40px);
+  margin-top: 48px;
 
-    @include respond(tablet) {
-        flex: none;
-        width: 100%;
-        margin-top: 0;
-    }
+  @include respond(tablet) {
+    flex: none;
+    width: 100%;
+    margin-top: 0;
+  }
 }
 
 .skills__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    font-family: $font-primary;
-    font-size: $font-size-skill-label;
-    letter-spacing: -0.03em;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-family: $font-primary;
+  font-size: $font-size-skill-label;
+  letter-spacing: -0.03em;
+  text-align: center;
 
-    img {
-        width: 64px;
-        height: 64px;
-        transform: scale(0.9375);
-        transition: transform 0.2s ease;
-    }
+  > img {
+    width: 64px;
+    height: 64px;
+    transform: scale(0.9375);
+    transition: transform 0.2s ease;
+  }
 
-    &:hover img {
-        transform: scale(1);
-    }
+  &:hover > img {
+    transform: scale(1);
+  }
 }
 
+// Growth mindset
+
+.skills__item--growth {
+  position: relative;
+
+  > span {
+    transition: color 0.2s ease;
+  }
+
+  &:hover {
+    > img {
+      transform: scale(0.9375);
+    }
+
+    > span {
+      color: $color-primary;
+    }
+
+    .skills__tooltip {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.skills__tooltip {
+  position: absolute;
+  bottom: 96px;
+  left: calc(50% + 42px);
+  z-index: 1;
+  width: 188px;
+  height: 129px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateX(-50%);
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease;
+}
+
+.skills__tooltip-bg {
+  position: absolute;
+  top: 0;
+  left: -2.13%;
+  width: 104.26%;
+  height: 104.2%;
+}
+
+.skills__tooltip-content {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 167px;
+  font-family: $font-secondary;
+  letter-spacing: normal;
+  color: $color-primary;
+  transform: translateX(-50%);
+
+  p {
+    font-size: 16px;
+  }
+}
+
+.skills__tooltip-skills {
+  display: flex;
+  gap: 16px;
+}
+
+.skills__tooltip-skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: $font-weight-bold;
+  line-height: 1.08;
+
+  img {
+    width: 32px;
+    height: 32px;
+  }
+}
