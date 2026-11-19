@@ -9,25 +9,21 @@
       <img
         class="about-me__photo"
         src="assets/images/about-me/portrait-placeholder.png"
-        alt="Portrait of Sven Apel"
+        [alt]="'about.photoAlt' | translate"
         width="568"
         height="568"
       />
     </div>
     <div class="about-me__box">
-      <p class="section-label">Who I Am</p>
+      <p class="section-label">{{ 'about.label' | translate }}</p>
       <div class="about-me__card">
-        <h2 class="section-title">About me</h2>
-        <p class="about-me__text">
-          Hey there, I'm Lukas! Write some information about yourself that is IT related. Why are
-          you passionate about coding? What is your source of inspiration for improving your
-          programming skills?
-        </p>
+        <h2 class="section-title">{{ 'about.title' | translate }}</h2>
+        <p class="about-me__text">{{ 'about.intro' | translate }}</p>
         <ul class="about-me__highlights">
           @for (highlight of highlights; track highlight.icon) {
             <li class="about-me__highlight">
               <img [src]="'assets/images/about-me/' + highlight.icon" alt="" />
-              <p>{{ highlight.text }}</p>
+              <p>{{ highlight.key | translate }}</p>
             </li>
           }
         </ul>

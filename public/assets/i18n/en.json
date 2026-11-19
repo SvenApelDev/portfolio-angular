@@ -1,8 +1,11 @@
 {
   "about": {
-    "intro": "Hey there, I'm Sven! Coding has always fascinated me. I love turning concepts based on UI/UX principles into working software. Freelance work for companies and startups keeps me improving.",
-    "location": "I'm based in Plauen, Germany, and open to remote work or positions in my region.",
-    "learning": "I recently deepened HTML and CSS and learned SCSS, JavaScript, TypeScript, Angular, Supabase and Git. I keep learning.",
-    "approach": "I start every challenge with an analysis of the current state and systematic debugging. Creativity helps me build simple, functional designs with great usability. As a former design team lead in e-commerce, I know the value of collaboration."
+    "label": "Who I Am",
+    "title": "About me",
+    "photoAlt": "Portrait of Sven Apel",
+    "intro": "Hey there, I'm Sven! After over ten years in UI/UX design and leading a design team, I trained as a frontend developer. Turning my concepts into working software is what drives me.",
+    "location": "Based in Plauen, Germany, I'm open to remote work or positions in my region.",
+    "learning": "Clean, responsive code and an eye for detail are my standard. Each project teaches me something new.",
+    "approach": "Creative problem solving is my strength. Every project gets the right technology, and usability always stays in focus. Freelancing for companies and startups has shown me how much good collaboration matters."
   }
 }
