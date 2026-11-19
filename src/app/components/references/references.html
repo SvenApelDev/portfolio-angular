@@ -22,6 +22,7 @@
           class="references__card"
           [class.references__card--active]="$index === position()"
           [attr.aria-hidden]="$index !== position()"
+          (click)="goTo($index)"
         >
           @if ($index === position()) {
             <img class="references__quote" src="assets/images/references/icon-quotes.svg" alt="" />

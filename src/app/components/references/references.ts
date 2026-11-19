@@ -29,6 +29,13 @@ export class References {
     this.move(-1);
   }
 
+  goTo(index: number): void {
+    const step = index - this.position();
+    if (step === 1 || step === -1) {
+      this.move(step);
+    }
+  }
+
   onTransitionEnd(event: TransitionEvent): void {
     if (event.target !== event.currentTarget || event.propertyName !== 'transform') return;
     this.isMoving = false;

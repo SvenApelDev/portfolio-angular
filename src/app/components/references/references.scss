@@ -26,8 +26,15 @@
     outline-offset: 4px;
   }
 
+  @include respond(tablet) {
+    padding-top: 12px;
+    margin-top: -4px;
+  }
+
   @include respond(mobile) {
     mask-image: none;
+    padding-top: 8px;
+    margin-top: 0;
   }
 }
 
@@ -63,6 +70,7 @@
   border-radius: 32px;
   background-color: $color-primary-10;
   transition: background-color 0.5s ease;
+  cursor: pointer;
 
   @include respond(mobile) {
     padding: 40px;
@@ -70,6 +78,7 @@
 
   &--active {
     background-color: $color-primary-30;
+    cursor: default;
   }
 }
 
@@ -80,7 +89,7 @@
   width: fluid(66px, 89px);
   height: fluid(48px, 64px);
 
-  @include respond(mobile) {
+  @include respond(tablet) {
     top: -12px;
     left: 0;
   }
