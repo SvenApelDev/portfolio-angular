@@ -63,9 +63,24 @@
   gap: 24px;
 
   a {
+    position: relative;
     font-family: $font-primary;
     font-size: $font-size-nav;
     letter-spacing: -0.03em;
+
+    &::after {
+      @include hover-dot;
+      position: absolute;
+      top: 26px;
+      left: 50%;
+      opacity: 0;
+      transform: translateX(-50%);
+      transition: opacity 0.2s ease;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
   }
 }
 
@@ -74,6 +89,15 @@
   height: 28px;
   border: 1px solid $color-primary;
   border-radius: 100px;
+  transition: border-color 0.2s ease;
+}
+
+.header__lang:hover {
+  border-color: $color-text;
+
+  .header__lang-btn:not(.header__lang-btn--active) {
+    color: $color-primary;
+  }
 }
 
 .header__lang-btn {
@@ -81,9 +105,11 @@
   border-radius: 100px;
   font-family: $font-primary;
   font-size: $font-size-small;
-  color: $color-primary;
+  color: $color-primary-50;
+  transition: color 0.2s ease;
 
   &--active {
+    margin: -2px;
     background-color: $color-primary;
     color: $color-text;
     font-weight: $font-weight-bold;

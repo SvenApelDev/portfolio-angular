@@ -3,7 +3,16 @@
 
 // Applies styles up to and including the given breakpoint
 @mixin respond($breakpoint) {
-    @media (max-width: map.get($breakpoints, $breakpoint)) {
-        @content;
-    }
+  @media (max-width: map.get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+// Hover dot used in navigation and footer
+@mixin hover-dot {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: $color-primary;
 }

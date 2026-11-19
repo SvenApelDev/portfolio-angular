@@ -10,7 +10,7 @@
   justify-content: space-between;
   align-items: center;
 
-  @include respond(small)  {
+  @include respond(small) {
     flex-wrap: wrap;
     align-items: flex-start;
     row-gap: 32px;
@@ -61,4 +61,27 @@
   justify-items: start;
   gap: 8px;
   font-size: $font-size-small;
+}
+
+.footer__links a {
+  position: relative;
+  transition: color 0.2s ease;
+
+  &::before {
+    @include hover-dot;
+    position: absolute;
+    top: 50%;
+    left: -12px;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: opacity 0.2s ease;
+  }
+
+  &:hover {
+    color: $color-primary;
+
+    &::before {
+      opacity: 1;
+    }
+  }
 }
