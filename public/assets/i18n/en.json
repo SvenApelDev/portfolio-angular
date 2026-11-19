@@ -31,7 +31,7 @@
       "description": "Kanban-style task manager. Create tasks, move them across the board by drag and drop and assign them to contacts and categories."
     },
     "pollo": {
-      "description": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
+      "description": "Object-oriented jump and run game with collision detection and boss logic. Help Pepe collect coins and salsa to beat the crazy hen."
     }
   }
 }
