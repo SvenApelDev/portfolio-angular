@@ -1,8 +1,9 @@
 import { Component, computed, signal } from '@angular/core';
 import { PROJECTS } from './projects.data';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
-  imports: [],
+  imports: [TranslatePipe],
   selector: 'app-projects',
   styleUrl: './projects.scss',
   templateUrl: './projects.html',

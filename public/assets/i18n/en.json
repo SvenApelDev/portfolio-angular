@@ -17,5 +17,21 @@
     "ctaText": "New technologies inspire me. Just tell me what your project needs.",
     "button": "Let's talk!",
     "growth": "I have a special interest in learning"
+  },
+  "projects": {
+    "label": "Portfolio",
+    "title": "Featured Projects",
+    "intro": "Explore a selection of my work. Try out the projects and see my skills in action.",
+    "subtitle": "What is this project about?",
+    "live": "Live Test",
+    "next": "Next project",
+    "close": "Close dialog",
+    "screenshotAlt": "Screenshot of {{title}}",
+    "join": {
+      "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+    },
+    "pollo": {
+      "description": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
+    }
   }
 }
