@@ -1,204 +1,213 @@
 @use 'all-styles' as *;
 
 .contact__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 64px;
 
-    @include respond(tablet) {
-        flex-direction: column;
-        align-items: stretch;
-    }
+  @include respond(tablet) {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
 
 // Text
 
 .contact__box {
-    display: flex;
-    flex: 0 1 568px;
-    flex-direction: column;
-    gap: fluid(32px, 40px);
+  display: flex;
+  flex: 0 1 568px;
+  flex-direction: column;
+  gap: fluid(32px, 40px);
 
-    @include respond(tablet) {
-        flex: none;
-    }
+  @include respond(tablet) {
+    flex: none;
+  }
 }
 
 .contact__header {
-    display: flex;
-    flex-direction: column;
-    gap: fluid(16px, 20px);
+  display: flex;
+  flex-direction: column;
+  gap: fluid(16px, 20px);
 }
 
 .contact__more {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .contact__subheadline {
-    font-size: $font-size-subheadline;
-    line-height: 1.2;
-    color: $color-primary;
+  font-size: $font-size-subheadline;
+  line-height: 1.2;
+  color: $color-primary;
 }
 
 .contact__text {
-    font-size: $font-size-small;
+  font-size: $font-size-small;
 
-    strong {
-        font-weight: $font-weight-bold;
-        color: $color-primary;
-    }
+  strong {
+    font-weight: $font-weight-bold;
+    color: $color-primary;
+  }
 }
 
 // Form
 
 .contact__form {
-    display: flex;
-    flex: 0 1 616px;
-    flex-direction: column;
-    align-items: center;
-    min-width: 0;
+  display: flex;
+  flex: 0 1 616px;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
 
-    @include respond(tablet) {
-        flex: none;
-    }
+  @include respond(tablet) {
+    flex: none;
+  }
 }
 
 .contact__fields {
-    width: 100%;
-    border-top: 1px solid $color-primary;
+  width: 100%;
+  border-top: 1px solid $color-primary;
 }
 
 .contact__field {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding: 32px;
-    border-bottom: 1px solid $color-primary;
-    transition: background-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 32px;
+  border-bottom: 1px solid $color-primary;
+  transition: background-color 0.2s ease;
 
-    &:hover,
-    &:focus-within {
-        .contact__input::placeholder {
-            color: $color-text;
-        }
+  &:hover,
+  &:focus-within {
+    .contact__input:not(.contact__input--error)::placeholder {
+      color: $color-text;
     }
+  }
 
-    &:focus-within {
-        background-color: $color-primary-10;
-    }
+  &:focus-within {
+    background-color: $color-primary-10;
+  }
 }
 
 .contact__label {
-    font-family: $font-primary;
-    font-size: $font-size-form-label;
-    font-weight: $font-weight-medium;
-    line-height: 1.2;
-    color: $color-primary;
+  font-family: $font-primary;
+  font-size: $font-size-form-label;
+  font-weight: $font-weight-medium;
+  line-height: 1.2;
+  color: $color-primary;
 }
 
 .contact__input {
-    margin: 3px;
-    width: calc(100% - 6px);
-    min-width: 0;
-    border: none;
-    background: transparent;
-    color: $color-text;
-    line-height: 1.2;
+  margin: 3px;
+  width: calc(100% - 6px);
+  min-width: 0;
+  border: none;
+  background: transparent;
+  color: $color-text;
+  line-height: 1.2;
 
-    &::placeholder {
-        color: $color-text-80;
-    }
+  &::placeholder {
+    color: $color-text-80;
+  }
 
-    &:focus {
-        outline: none;
-    }
+  &:focus {
+    outline: none;
+  }
 
-    &:-webkit-autofill,
-    &:-webkit-autofill:hover,
-    &:-webkit-autofill:focus {
-        -webkit-text-fill-color: $color-text;
-        -webkit-box-shadow: 0 0 0 1000px $color-background inset;
-        caret-color: $color-text;
-        transition: background-color 9999s ease-in-out 0s;
-    }
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    -webkit-text-fill-color: $color-text;
+    -webkit-box-shadow: 0 0 0 1000px $color-background inset;
+    caret-color: $color-text;
+    transition: background-color 9999s ease-in-out 0s;
+  }
 
-        &--message {
-        resize: none;
-        max-height: calc(1.2em * 6);
-        overflow-y: auto;
-    }
+  &--message {
+    resize: none;
+    max-height: calc(1.2em * 6);
+    overflow-y: auto;
+  }
 
-
+  &--error::placeholder {
+    color: $color-error-80;
+  }
 }
 
 // Privacy
 
 .contact__privacy {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 100%;
-    margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  margin-top: 40px;
+
+  .contact__error {
+    color: $color-error;
+  }
 }
 
 .contact__checkbox {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: $font-size-privacy;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: $font-size-privacy;
+  cursor: pointer;
+
+  input {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    appearance: none;
     cursor: pointer;
+    background: url('../../../../public/assets/images/contact/icon-unchecked.svg') center / contain
+      no-repeat;
+    transition: background-color 0.2s ease;
 
-    input {
-        flex-shrink: 0;
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-        appearance: none;
-        cursor: pointer;
-        background: url('../../../../public/assets/images/contact/icon-unchecked.svg') center / contain no-repeat;
-        transition: background-color 0.2s ease;
-
-        &:hover {
-            background-color: $color-primary-30;
-        }
-
-        &:checked {
-            background-image: url('../../../../public/assets/images/contact/icon-checked.svg');
-        }
+    &:hover {
+      background-color: $color-primary-30;
     }
 
-    a {
-        padding-inline: 4px;
-        border-bottom: 1px solid transparent;
-        font-family: $font-primary;
-        color: $color-primary;
-        transition: color 0.2s ease, border-color 0.2s ease;
-
-        &:hover {
-            border-bottom-color: $color-text;
-            color: $color-text;
-        }
+    &:checked {
+      background-image: url('../../../../public/assets/images/contact/icon-checked.svg');
     }
+  }
+
+  a {
+    padding: 4px;
+    border-bottom: 1px solid transparent;
+    font-family: $font-primary;
+    color: $color-primary;
+    transition:
+      color 0.2s ease,
+      border-color 0.2s ease;
+
+    &:hover {
+      border-bottom-color: $color-primary;
+      color: $color-text;
+    }
+  }
 }
 
 .contact__error {
-    min-height: 1.2em;
-    font-size: $font-size-error;
-    line-height: 1.2;
-    color: $color-error-80;
+  min-height: 1.2em;
+  font-size: $font-size-error;
+  line-height: 1.2;
+  color: $color-error-80;
 }
 
 // Button
 
 .contact__btn {
-    margin-top: 16px;
+  margin-top: 16px;
 
-    &:disabled {
-        border-color: $color-text-50;
-        color: $color-text-80;
-        cursor: not-allowed;
-    }
+  &:disabled {
+    border-color: $color-text-50;
+    color: $color-text-80;
+    cursor: not-allowed;
+  }
 }

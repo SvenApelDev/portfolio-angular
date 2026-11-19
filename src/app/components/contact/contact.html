@@ -24,7 +24,12 @@
             class="contact__input"
             id="contact-name"
             type="text"
-            placeholder="Your name goes here"
+            [placeholder]="
+              nameField.touched && nameField.errors?.['required']
+                ? 'Please tell me your name.'
+                : 'Your name goes here'
+            "
+            [class.contact__input--error]="nameField.touched && nameField.errors?.['required']"
             name="name"
             [(ngModel)]="contactData.name"
             [ngModelOptions]="{ updateOn: 'blur' }"
@@ -35,9 +40,7 @@
             pattern="[A-Za-zÀ-ÖØ-öø-ÿ' \-]+"
           />
           <p class="contact__error">
-            @if (nameField.touched && nameField.errors?.['required']) {
-              Please enter your name.
-            } @else if (nameField.touched && nameField.errors?.['minlength']) {
+            @if (nameField.touched && nameField.errors?.['minlength']) {
               Your name must be at least 2 characters.
             } @else if (nameField.touched && nameField.errors?.['pattern']) {
               Please use letters only.
@@ -51,7 +54,12 @@
             class="contact__input"
             id="contact-email"
             type="email"
-            placeholder="youremail@email.com"
+            [placeholder]="
+              emailField.touched && emailField.errors?.['required']
+                ? 'I need your email to reply.'
+                : 'youremail@email.com'
+            "
+            [class.contact__input--error]="emailField.touched && emailField.errors?.['required']"
             name="email"
             [(ngModel)]="contactData.email"
             [ngModelOptions]="{ updateOn: 'blur' }"
@@ -62,9 +70,7 @@
           />
 
           <p class="contact__error">
-            @if (emailField.touched && emailField.errors?.['required']) {
-              Please enter your email.
-            } @else if (emailField.touched && emailField.errors?.['pattern']) {
+            @if (emailField.touched && emailField.errors?.['pattern']) {
               Please enter a valid email address.
             }
           </p>
@@ -76,7 +82,14 @@
             class="contact__input contact__input--message"
             id="contact-message"
             rows="1"
-            placeholder="Hello Sven, I am interested in..."
+            [placeholder]="
+              messageField.touched && messageField.errors?.['required']
+                ? 'Let me know how I can help you.'
+                : 'Hello Sven, I am interested in...'
+            "
+            [class.contact__input--error]="
+              messageField.touched && messageField.errors?.['required']
+            "
             name="message"
             [(ngModel)]="contactData.message"
             [ngModelOptions]="{ updateOn: 'blur' }"
@@ -87,9 +100,7 @@
           ></textarea>
 
           <p class="contact__error">
-            @if (messageField.touched && messageField.errors?.['required']) {
-              What do you need to develop?
-            } @else if (messageField.touched && messageField.errors?.['minlength']) {
+            @if (messageField.touched && messageField.errors?.['minlength']) {
               Your message must be at least 10 characters.
             }
           </p>
