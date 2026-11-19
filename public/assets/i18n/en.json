@@ -28,7 +28,7 @@
     "close": "Close dialog",
     "screenshotAlt": "Screenshot of {{title}}",
     "join": {
-      "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+      "description": "Kanban-style task manager. Create tasks, move them across the board by drag and drop and assign them to contacts and categories."
     },
     "pollo": {
       "description": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
