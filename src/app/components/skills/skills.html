@@ -3,22 +3,15 @@
     <div class="skills__box">
       <p class="section-label">Technologies</p>
       <div class="skills__card">
-        <h2 class="section-title">Skill Set</h2>
-        <p class="skills__text">
-          A short introduction of your skills. Highlight your experience of using different
-          front-end technologies and emphasise your openness to learning and adapting to new
-          technologies. Show how important it is for you to keep up with the rapid changes in web
-          development.
-        </p>
+        <h2 class="section-title">{{ 'skills.label' | translate }}</h2>
+        <p class="skills__text">{{ 'skills.intro' | translate }}</p>
         <div class="skills__more">
-          <h3 class="skills__subheadline">You need <span>another skill?</span></h3>
-          <p class="skills__small">
-            Feel free to contact me. I look forward to expanding on my previous knowledge.
-          </p>
+          <h3 class="skills__subheadline">{{ 'skills.ctaTitle' | translate }} <span>{{ 'skills.ctaHighlight' | translate }}</span></h3>
+          <p class="skills__small">{{ 'skills.ctaText' | translate }}</p>
         </div>
 
         <a class="btn skills__btn" routerLink="/" fragment="contact"
-          ><span class="btn__label">Let's talk!</span></a
+          ><span class="btn__label">{{ 'skills.button' | translate }}</span></a
         >
       </div>
     </div>
@@ -36,7 +29,7 @@
         <div class="skills__tooltip">
           <img class="skills__tooltip-bg" src="assets/images/skills/tooltip-bubble.svg" alt="" />
           <div class="skills__tooltip-content">
-            <p>I have a special interest in learning</p>
+            <p>{{ 'skills.growth' | translate }}</p>
             <div class="skills__tooltip-skills">
               <div class="skills__tooltip-skill">
                 <img src="assets/images/skills/icon-react.svg" alt="" />
