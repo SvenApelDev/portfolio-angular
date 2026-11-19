@@ -1,11 +1,11 @@
 <section class="references">
-  <h2 class="references__title">What my colleagues say about me</h2>
+  <h2 class="references__title">{{ 'references.title' | translate }}</h2>
 
   <div
     class="references__slider"
     tabindex="0"
-    aria-roledescription="carousel"
-    aria-label="References"
+    [attr.aria-roledescription]="'references.carousel' | translate"
+    [attr.aria-label]="'references.label' | translate"
     (keydown.arrowleft)="prev()"
     (keydown.arrowright)="next()"
     (touchstart)="onTouchStart($event)"
@@ -26,8 +26,10 @@
           @if ($index === position()) {
             <img class="references__quote" src="assets/images/references/icon-quotes.svg" alt="" />
           }
-          <blockquote class="references__text">{{ reference.text }}</blockquote>
-          <p class="references__author">{{ reference.author }}</p>
+          <blockquote class="references__text">{{ reference.textKey | translate }}</blockquote>
+          <p class="references__author">
+            {{ reference.name }} - {{ reference.roleKey | translate }}
+          </p>
         </article>
       }
     </div>
@@ -37,7 +39,7 @@
     <button
       class="references__arrow"
       type="button"
-      aria-label="Previous reference"
+      [attr.aria-label]="'references.prev' | translate"
       (click)="prev()"
     >
       <img src="assets/images/shared/icon-arrow-left.svg" alt="" />
@@ -55,7 +57,7 @@
     <button
       class="references__arrow references__arrow--next"
       type="button"
-      aria-label="Next reference"
+      [attr.aria-label]="'references.next' | translate"
       (click)="next()"
     >
       <img src="assets/images/shared/icon-arrow-left.svg" alt="" />

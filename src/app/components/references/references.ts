@@ -1,8 +1,9 @@
 import { Component, computed, signal } from '@angular/core';
 import { REFERENCES } from './references.data';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
-  imports: [],
+  imports: [TranslatePipe],
   selector: 'app-references',
   styleUrl: './references.scss',
   templateUrl: './references.html',

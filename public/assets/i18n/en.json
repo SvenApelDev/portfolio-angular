@@ -33,5 +33,24 @@
     "pollo": {
       "description": "Object-oriented jump and run game with collision detection and boss logic. Help Pepe collect coins and salsa to beat the crazy hen."
     }
+  },
+  "references": {
+    "title": "What my colleagues say about me",
+    "label": "References",
+    "carousel": "carousel",
+    "prev": "Previous reference",
+    "next": "Next reference",
+    "first": {
+      "text": "Lukas has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.",
+      "role": "Team Partner"
+    },
+    "second": {
+      "text": "Lukas has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.",
+      "role": "Team Partner"
+    },
+    "third": {
+      "text": "Lukas has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.",
+      "role": "Team Partner"
+    }
   }
 }

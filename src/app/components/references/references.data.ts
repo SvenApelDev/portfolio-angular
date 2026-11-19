@@ -1,19 +1,23 @@
 export interface Reference {
-  text: string;
-  author: string;
+  textKey: string;
+  name: string;
+  roleKey: string;
 }
 
 export const REFERENCES: Reference[] = [
   {
-    text: 'Lukas has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.',
-    author: 'H.Janisch - Team Partner',
+    textKey: 'references.first.text',
+    name: 'H.Janisch',
+    roleKey: 'references.first.role',
   },
     {
-    text: 'Lukas has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.',
-    author: 'H.Janisch - Team Partner',
+    textKey: 'references.second.text',
+    name: 'H.Janisch',
+    roleKey: 'references.second.role',
   },
     {
-    text: 'Lukas has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.',
-    author: 'H.Janisch - Team Partner',
+    textKey: 'references.third.text',
+    name: 'H.Janisch',
+    roleKey: 'references.third.role',
   },
 ];
