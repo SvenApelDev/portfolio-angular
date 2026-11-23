@@ -4,7 +4,10 @@
     "skills": "Skills",
     "projects": "Projekte",
     "openMenu": "Menü öffnen",
-    "closeMenu": "Menü schließen"
+    "closeMenu": "Menü schließen",
+    "mainNav": "Hauptnavigation",
+    "mobileNav": "Mobile Navigation",
+    "language": "Sprache"
   },
 
   "hero": {
@@ -117,5 +120,41 @@
     "location": "Plauen, Deutschland",
     "email": "E-Mail",
     "legal": "Impressum"
+  },
+
+  "shared": {
+    "home": "Sven Apel, zur Startseite"
+  },
+
+  "legal": {
+    "back": "Zurück zur Startseite",
+    "title": "Rechtliche Hinweise",
+    "imprint": "Impressum",
+    "terms": {
+      "title": "Nutzungsbedingungen",
+      "text": "Mit dem Zugriff auf und der Nutzung von <strong>Portfolio</strong> (Produkt) erkennen Sie die folgenden Bedingungen sowie alle Richtlinien, Leitlinien oder Änderungen an, die Ihnen von Zeit zu Zeit mitgeteilt werden. Ich kann diese Bedingungen jederzeit ohne vorherige Ankündigung ändern."
+    },
+    "scope": {
+      "title": "Umfang und Eigentum des Produkts",
+      "text": "<strong>Portfolio</strong> wurde im Rahmen einer Weiterbildung zum Webentwickler an der <strong>Developer Akademie GmbH</strong> entwickelt. Es dient Lernzwecken und ist nicht für eine umfangreiche private oder geschäftliche Nutzung vorgesehen. Daher kann ich keine dauerhafte Verfügbarkeit, Zuverlässigkeit, Richtigkeit oder sonstige Qualität dieses Produkts garantieren.<br />Das Design von <strong>Portfolio</strong> ist Eigentum der <strong>Developer Akademie GmbH</strong>. Eine unbefugte Nutzung, Vervielfältigung, Änderung, Verbreitung oder Nachbildung des Designs ist ausdrücklich untersagt."
+    },
+    "rights": {
+      "title": "Eigentumsrechte",
+      "text": "Mit Ausnahme des Designs, das der <strong>Developer Akademie GmbH</strong> gehört, behalte ich alle Eigentumsrechte an Portfolio, einschließlich aller urheberrechtlich geschützten Inhalte, Marken und sonstigen geschützten Informationen."
+    },
+    "use": {
+      "title": "Nutzung des Produkts",
+      "text": "<strong>Portfolio</strong> darf nur für rechtmäßige Zwecke und im Einklang mit allen geltenden Gesetzen und Vorschriften genutzt werden. Jede Nutzung von Portfolio für illegale Aktivitäten oder um andere Personen zu belästigen, zu schädigen, zu bedrohen oder einzuschüchtern, ist ausdrücklich untersagt. Für Ihre Interaktionen mit anderen Nutzern von <strong>Portfolio</strong> sind Sie allein verantwortlich."
+    },
+    "warranty": {
+      "title": "Gewährleistungs- und Haftungsausschluss",
+      "text": "<strong>Portfolio</strong> wird ohne Mängelgewähr und ohne ausdrückliche oder stillschweigende Gewährleistung jeglicher Art bereitgestellt, einschließlich, aber nicht beschränkt auf die stillschweigende Gewährleistung der Marktgängigkeit, der Eignung für einen bestimmten Zweck und der Nichtverletzung von Rechten. In keinem Fall haften ich oder die <strong>Developer Akademie</strong> für direkte, indirekte, zufällige, besondere, Folge- oder Strafschäden, einschließlich, aber nicht beschränkt auf entgangenen Gewinn, Verlust von Firmenwert, Nutzung, Daten oder sonstige immaterielle Verluste, selbst wenn ich auf die Möglichkeit solcher Schäden hingewiesen wurde, die sich aus oder in Verbindung mit der Nutzung oder Leistung von Portfolio ergeben."
+    },
+    "indemnity": {
+      "title": "Freistellung",
+      "text": "Sie verpflichten sich, mich, die <strong>Developer Akademie</strong> sowie deren verbundene Unternehmen, Partner, leitende Angestellte, Geschäftsführer, Vertreter und Mitarbeiter von allen Ansprüchen, Forderungen, Verlusten, Schäden, Kosten oder Verbindlichkeiten (einschließlich angemessener Anwaltskosten) freizustellen, zu verteidigen und schadlos zu halten, die sich aus Ihrer Nutzung von <strong>Portfolio</strong> und/oder Ihrem Verstoß gegen diese rechtlichen Hinweise ergeben oder damit zusammenhängen."
+    },
+    "contact": "Bei Fragen oder Mitteilungen erreichen Sie mich unter",
+    "updated": "Stand: 29. September 2026"
   }
 }

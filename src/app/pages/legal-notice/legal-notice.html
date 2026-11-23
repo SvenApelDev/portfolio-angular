@@ -1,13 +1,12 @@
 <main class="legal">
   <div class="container">
-
-    <a class="legal__back" routerLink="/" aria-label="Back to home">
+    <a class="legal__back" routerLink="/" [attr.aria-label]="'legal.back' | translate">
       <img src="assets/images/shared/icon-arrow-left.svg" alt="" />
     </a>
-    <h1 class="section-title legal__title">Legal Notice</h1>
+    <h1 class="section-title legal__title">{{ 'legal.title' | translate }}</h1>
     <div class="legal__content">
       <div class="legal__block">
-        <h2>Imprint</h2>
+        <h2>{{ 'legal.imprint' | translate }}</h2>
         <p>
           Sven Apel<br />
           Hainstraße 4<br />
@@ -16,71 +15,33 @@
         </p>
       </div>
       <div class="legal__block">
-        <h2>Acceptance of terms</h2>
-        <p>
-          By accessing and using <strong>Portfolio</strong> (Product), you acknowledge and agree to
-          the following terms and conditions, and any policies, guidelines, or amendments thereto
-          that may be presented to you from time to time. I may update or change the terms and
-          conditions from time to time without notice.
-        </p>
+        <h2>{{ 'legal.terms.title' | translate }}</h2>
+        <p [innerHTML]="'legal.terms.text' | translate"></p>
       </div>
       <div class="legal__block">
-        <h2>Scope and ownership of the product</h2>
-        <p>
-          <strong>Portfolio</strong> has been developed as part of a web development training at the
-          <strong>Developer Akademie GmbH</strong>. It has an educational purpose and is not
-          intended for extensive personal &amp; business usage. As such, I cannot guarantee consistent
-          availability, reliability, accuracy, or any other aspect of quality regarding this
-          Product.<br />
-          The design of <strong>Portfolio</strong> is owned by the
-          <strong>Developer Akademie GmbH</strong>. Unauthorized use, reproduction, modification,
-          distribution, or replication of the design is strictly prohibited.
-        </p>
+        <h2>{{ 'legal.scope.title' | translate }}</h2>
+        <p [innerHTML]="'legal.scope.text' | translate"></p>
       </div>
       <div class="legal__block">
-        <h2>Proprietary rights</h2>
-        <p>
-          Aside from the design owned by <strong>Developer Akademie GmbH</strong>, I retain all
-          proprietary rights in Portfolio, including any associated copyrighted material,
-          trademarks, and other proprietary information.
-        </p>
+        <h2>{{ 'legal.rights.title' | translate }}</h2>
+        <p [innerHTML]="'legal.rights.text' | translate"></p>
       </div>
       <div class="legal__block">
-        <h2>Use of the product</h2>
-        <p>
-          <strong>Portfolio</strong> is intended to be used for lawful purposes only, in accordance
-          with all applicable laws and regulations. Any use of Portfolio for illegal activities, or
-          to harass, harm, threaten, or intimidate another person, is strictly prohibited. You are
-          solely responsible for your interactions with other users of <strong>Portfolio</strong>.
-        </p>
+        <h2>{{ 'legal.use.title' | translate }}</h2>
+        <p [innerHTML]="'legal.use.text' | translate"></p>
       </div>
       <div class="legal__block">
-        <h2>Disclaimer of warranties and limitation of liability</h2>
-        <p>
-          <strong>Portfolio</strong> is provided "as is" without warranty of any kind, whether
-          express or implied, including but not limited to the implied warranties of
-          merchantability, fitness for a particular purpose, and non-infringement. In no event will
-          I or the <strong>Developer Akademie</strong>, be liable for any direct, indirect,
-          incidental, special, consequential or exemplary damages, including but not limited to,
-          damages for loss of profits, goodwill, use, data, or other intangible losses, even if I
-          have been advised of the possibility of such damages, arising out of or in connection with
-          the use or performance of Portfolio.
-        </p>
+        <h2>{{ 'legal.warranty.title' | translate }}</h2>
+        <p [innerHTML]="'legal.warranty.text' | translate"></p>
       </div>
       <div class="legal__block">
-        <h2>Indemnity</h2>
+        <h2>{{ 'legal.indemnity.title' | translate }}</h2>
+        <p [innerHTML]="'legal.indemnity.text' | translate"></p>
         <p>
-          You agree to indemnify, defend and hold harmless me, the
-          <strong>Developer Akademie</strong>, and its affiliates, partners, officers, directors,
-          agents, and employees, from and against any claim, demand, loss, damage, cost, or
-          liability (including reasonable legal fees) arising out of or relating to your use of
-          <strong>Portfolio</strong> and/or your breach of this Legal Notice.
-        </p>
-        <p>
-          For any questions or notices, please contact me at
+          {{ 'legal.contact' | translate }}
           <a href="mailto:svenapel@web.de">svenapel@web.de</a>.
         </p>
-        <p>Last updated: September 29, 2026</p>
+        <p>{{ 'legal.updated' | translate }}</p>
       </div>
     </div>
   </div>
