@@ -1,1 +1,9 @@
-{}
+{
+  "header": {
+    "about": "Über mich",
+    "skills": "Skills",
+    "projects": "Projekte",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen"
+  }
+}

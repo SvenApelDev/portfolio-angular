@@ -1,4 +1,12 @@
 {
+  "header": {
+    "about": "About me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+
   "about": {
     "label": "Who I Am",
     "title": "About me",
@@ -8,6 +16,7 @@
     "learning": "Clean, responsive code and an eye for detail are my standard. Each project teaches me something new.",
     "approach": "Creative problem solving is my strength. Every project gets the right technology, and usability always stays in focus. Freelancing for companies and startups has shown me how much good collaboration matters."
   },
+
   "skills": {
     "label": "Technologies",
     "title": "Skill Set",
@@ -18,6 +27,7 @@
     "button": "Let's talk!",
     "growth": "I have a special interest in learning"
   },
+
   "projects": {
     "label": "Portfolio",
     "title": "Featured Projects",
@@ -34,6 +44,7 @@
       "description": "Object-oriented jump and run game with collision detection and boss logic. Help Pepe collect coins and salsa to beat the crazy hen."
     }
   },
+
   "references": {
     "title": "What my colleagues say about me",
     "label": "References",

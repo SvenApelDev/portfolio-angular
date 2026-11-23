@@ -2,14 +2,34 @@
   <div class="header__inner container">
     <nav class="header__nav" aria-label="Main navigation">
       <div class="header__lang" role="group" aria-label="Language">
-        <button class="header__lang-btn header__lang-btn--active" type="button">EN</button>
-        <button class="header__lang-btn" type="button">DE</button>
+        <button
+          class="header__lang-btn"
+          [class.header__lang-btn--active]="currentLang === 'en'"
+          type="button"
+          (click)="switchLanguage('en')"
+        >
+          EN
+        </button>
+        <button
+          class="header__lang-btn"
+          [class.header__lang-btn--active]="currentLang === 'de'"
+          type="button"
+          (click)="switchLanguage('de')"
+        >
+          DE
+        </button>
       </div>
 
       <ul class="header__links">
-        <li><a routerLink="/" fragment="about-me">About me</a></li>
-        <li><a routerLink="/" fragment="skills">Skills</a></li>
-        <li><a routerLink="/" fragment="projects">Projects</a></li>
+        <li>
+          <a routerLink="/" fragment="about-me">{{ 'header.about' | translate }}</a>
+        </li>
+        <li>
+          <a routerLink="/" fragment="skills">{{ 'header.skills' | translate }}</a>
+        </li>
+        <li>
+          <a routerLink="/" fragment="projects">{{ 'header.projects' | translate }}</a>
+        </li>
       </ul>
     </nav>
 
@@ -22,21 +42,61 @@
     </a>
 
     <div class="header__menu-wrap">
-      <button class="header__burger" type="button" [attr.aria-label]="isMenuOpen ? 'Close menu' : 'Open menu'" [attr.aria-expanded]="isMenuOpen" aria-controls="mobile-menu" (click)="toggleMenu()">
-        <img [src]="isMenuOpen ? 'assets/images/shared/icon-menu-active.svg' : 'assets/images/shared/icon-menu.svg' " alt="" />
+      <button
+        class="header__burger"
+        type="button"
+        [attr.aria-label]="(isMenuOpen ? 'header.closeMenu' : 'header.openMenu') | translate"
+        [attr.aria-expanded]="isMenuOpen"
+        aria-controls="mobile-menu"
+        (click)="toggleMenu()"
+      >
+        <img
+          [src]="
+            isMenuOpen
+              ? 'assets/images/shared/icon-menu-active.svg'
+              : 'assets/images/shared/icon-menu.svg'
+          "
+          alt=""
+        />
       </button>
 
       @if (isMenuOpen) {
         <nav id="mobile-menu" class="header__menu" aria-label="Mobile navigation">
           <ul class="header__menu-links">
-            <li><a routerLink="/" fragment="about-me" (click)="closeMenu()">About me</a></li>
-            <li><a routerLink="/" fragment="skills" (click)="closeMenu()">Skills</a></li>
-            <li><a routerLink="/" fragment="projects" (click)="closeMenu()">Projects</a></li>
+            <li>
+              <a routerLink="/" fragment="about-me" (click)="closeMenu()">{{
+                'header.about' | translate
+              }}</a>
+            </li>
+            <li>
+              <a routerLink="/" fragment="skills" (click)="closeMenu()">{{
+                'header.skills' | translate
+              }}</a>
+            </li>
+            <li>
+              <a routerLink="/" fragment="projects" (click)="closeMenu()">{{
+                'header.projects' | translate
+              }}</a>
+            </li>
           </ul>
 
           <div class="header__lang" role="group" aria-label="Language">
-            <button class="header__lang-btn header__lang-btn--active" type="button">EN</button>
-            <button class="header__lang-btn" type="button">DE</button>
+            <button
+              class="header__lang-btn"
+              [class.header__lang-btn--active]="currentLang === 'en'"
+              type="button"
+              (click)="switchLanguage('en')"
+            >
+              EN
+            </button>
+            <button
+              class="header__lang-btn"
+              [class.header__lang-btn--active]="currentLang === 'de'"
+              type="button"
+              (click)="switchLanguage('de')"
+            >
+              DE
+            </button>
           </div>
         </nav>
       }
