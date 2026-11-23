@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
+import { ContactFormState } from '../../services/contact-form-state';
 
 @Component({
   imports: [FormsModule, RouterLink, TranslatePipe],
@@ -10,12 +11,8 @@ import { TranslatePipe } from '@ngx-translate/core';
   templateUrl: './contact.html',
 })
 export class Contact {
-  contactData = {
-    name: '',
-    email: '',
-    message: '',
-    privacy: false,
-  };
+  private formState = inject(ContactFormState);
+  contactData = this.formState.data;
 
   onSubmit(form: NgForm): void {
     if (form.invalid) return;
