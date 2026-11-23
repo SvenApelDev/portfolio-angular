@@ -7,6 +7,20 @@
     "closeMenu": "Close menu"
   },
 
+  "hero": {
+    "role": "Frontend Developer",
+    "checkWork": "Check my work",
+    "contact": "Contact me",
+    "scrollDown": "Scroll down",
+    "email": "Email",
+    "marquee": {
+      "remote": "Available for remote work",
+      "role": "Frontend Developer",
+      "location": "Based in Plauen",
+      "open": "Open to work"
+    }
+  },
+
   "about": {
     "label": "Who I Am",
     "title": "About me",
@@ -63,5 +77,45 @@
       "text": "Lukas has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.",
       "role": "Team Partner"
     }
+  },
+
+  "contact": {
+    "label": "Contact me",
+    "title": "Let's work together",
+    "subtitle": "Got a problem to solve?",
+    "text": "Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.",
+    "question": "Need a Frontend developer?",
+    "talk": "Let's talk!",
+    "labels": {
+      "name": "What's your name?",
+      "email": "What's your email?",
+      "message": "How can I help you?"
+    },
+    "placeholders": {
+      "name": "Your name goes here",
+      "email": "youremail@email.com",
+      "message": "Hello Sven, I am interested in..."
+    },
+    "privacyBefore": "I've read the",
+    "privacyLink": "privacy policy",
+    "privacyAfter": "and agree to the processing of my data as outlined.",
+    "button": "Say Hello ;)",
+    "errors": {
+      "nameRequired": "Please tell me your name.",
+      "nameMin": "Your name must be at least 2 characters.",
+      "namePattern": "Please use letters only.",
+      "emailRequired": "I need your email to reply.",
+      "emailPattern": "Please enter a valid email address.",
+      "messageRequired": "Let me know how I can help you.",
+      "messageMin": "Your message must be at least 10 characters.",
+      "privacy": "Please accept the privacy policy."
+    }
+  },
+
+  "footer": {
+    "role": "Web Developer",
+    "location": "Plauen Germany",
+    "email": "Email",
+    "legal": "Legal Notice"
   }
 }

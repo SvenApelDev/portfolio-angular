@@ -6,8 +6,8 @@
         <img class="logo__hover" src="assets/images/shared/logo-svenapel-hover.svg" alt="" />
       </a>
       <div class="footer__info">
-        <p>Web Developer</p>
-        <p>Plauen Germany</p>
+        <p>{{ 'footer.role' | translate }}</p>
+        <p>{{ 'footer.location' | translate }}</p>
       </div>
     </div>
     <p class="footer__copyright">© Sven Apel {{ year }}</p>
@@ -18,8 +18,12 @@
         >
       </li>
       <li><a href="" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-      <li><a href="mailto:svenapel@web.de">Email</a></li>
-      <li><a routerLink="/legal-notice">Legal Notice</a></li>
+      <li>
+        <a href="mailto:svenapel@web.de">{{ 'footer.email' | translate }}</a>
+      </li>
+      <li>
+        <a routerLink="/legal-notice">{{ 'footer.legal' | translate }}</a>
+      </li>
     </ul>
   </div>
 </footer>

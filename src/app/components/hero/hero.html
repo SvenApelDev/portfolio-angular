@@ -1,46 +1,71 @@
 <section class="hero">
-    <div class="hero__content">
-        <p class="hero__subtitle">Frontend Developer</p>
-        <h1 class="hero__name">Sven Apel</h1>
-        <div class="hero__buttons">
-            <a class="btn" routerLink="/" fragment="projects"><span class="btn__label">Check my work</span></a>
-            <a class="btn" routerLink="/" fragment="contact"><span class="btn__label">Contact me</span></a>
-        </div>
+  <div class="hero__content">
+    <p class="hero__subtitle">{{ 'hero.role' | translate }}</p>
+    <h1 class="hero__name">Sven Apel</h1>
+    <div class="hero__buttons">
+      <a class="btn" routerLink="/" fragment="projects"
+        ><span class="btn__label">{{ 'hero.checkWork' | translate }}</span></a
+      >
+      <a class="btn" routerLink="/" fragment="contact"
+        ><span class="btn__label">{{ 'hero.contact' | translate }}</span></a
+      >
+    </div>
+  </div>
+
+  <div class="hero__sides container">
+    <div class="hero__side">
+      <a
+        class="hero__scroll"
+        routerLink="/"
+        fragment="about-me"
+        [attr.aria-label]="'hero.scrollDown' | translate"
+      >
+        <img src="assets/images/shared/icon-arrow-down.svg" alt="" />
+      </a>
+      <span class="hero__line hero__line--left"></span>
     </div>
 
-    <div class="hero__sides container">
-        <div class="hero__side">
-            <a class="hero__scroll" routerLink="/" fragment="about-me" aria-label="Scroll down">
-                <img src="assets/images/shared/icon-arrow-down.svg" alt="" />
-            </a>
-            <span class="hero__line hero__line--left"></span>
-        </div>
-
-        <div class="hero__side">
-            <a class="hero__email" href="mailto:svenapel@web.de">svenapel@web.de</a>
-            <div class="hero__icons">
-                <a class="hero__icon hero__mail" href="mailto:svenapel@web.de" aria-label="Email">
-                    <img class="hero__icon-default" src="assets/images/shared/icon-mail.svg" alt="" />
-                    <img class="hero__icon-hover" src="assets/images/shared/icon-mail-hover.svg" alt="" />
-                </a>
-                <a class="hero__icon" href="https://github.com/SvenApelDev" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                    <img class="hero__icon-default" src="assets/images/shared/icon-github.svg" alt="" />
-                    <img class="hero__icon-hover" src="assets/images/shared/icon-github-hover.svg" alt="" />
-                </a>
-                <a class="hero__icon" href="LINKEDIN-URL" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <img class="hero__icon-default" src="assets/images/shared/icon-linkedin.svg" alt="" />
-                    <img class="hero__icon-hover" src="assets/images/shared/icon-linkedin-hover.svg" alt="" />
-                </a>
-            </div>
-            <span class="hero__line hero__line--right"></span>
-        </div>
+    <div class="hero__side">
+      <a class="hero__email" href="mailto:svenapel@web.de">svenapel@web.de</a>
+      <div class="hero__icons">
+        <a
+          class="hero__icon hero__mail"
+          href="mailto:svenapel@web.de"
+          [attr.aria-label]="'hero.email' | translate"
+        >
+          <img class="hero__icon-default" src="assets/images/shared/icon-mail.svg" alt="" />
+          <img class="hero__icon-hover" src="assets/images/shared/icon-mail-hover.svg" alt="" />
+        </a>
+        <a
+          class="hero__icon"
+          href="https://github.com/SvenApelDev"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
+          <img class="hero__icon-default" src="assets/images/shared/icon-github.svg" alt="" />
+          <img class="hero__icon-hover" src="assets/images/shared/icon-github-hover.svg" alt="" />
+        </a>
+        <a
+          class="hero__icon"
+          href="LINKEDIN-URL"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <img class="hero__icon-default" src="assets/images/shared/icon-linkedin.svg" alt="" />
+          <img class="hero__icon-hover" src="assets/images/shared/icon-linkedin-hover.svg" alt="" />
+        </a>
+      </div>
+      <span class="hero__line hero__line--right"></span>
     </div>
+  </div>
 
-    <div class="hero__marquee" aria-hidden="true">
-        <div class="hero__marquee-track">
-            @for (item of [...marqueeItems, ...marqueeItems]; track $index) {
-                <span class="hero__marquee-item">{{ item }}</span>
-            }
-        </div>
+  <div class="hero__marquee" aria-hidden="true">
+    <div class="hero__marquee-track">
+      @for (item of [...marqueeItems, ...marqueeItems]; track $index) {
+        <span class="hero__marquee-item">{{ item | translate }}</span>
+      }
     </div>
+  </div>
 </section>

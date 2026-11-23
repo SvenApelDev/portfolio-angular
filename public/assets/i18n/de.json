@@ -7,6 +7,20 @@
     "closeMenu": "Menü schließen"
   },
 
+  "hero": {
+    "role": "Frontend-Entwickler",
+    "checkWork": "Meine Projekte",
+    "contact": "Kontakt",
+    "scrollDown": "Nach unten scrollen",
+    "email": "E-Mail",
+    "marquee": {
+      "remote": "Verfügbar für Remote-Arbeit",
+      "role": "Frontend-Entwickler",
+      "location": "Ansässig in Plauen",
+      "open": "Offen für neue Aufgaben"
+    }
+  },
+
   "about": {
     "label": "Wer ich bin",
     "title": "Über mich",
@@ -63,5 +77,45 @@
       "text": "Lukas hat sich als zuverlässiger Gruppenpartner erwiesen. Seine technischen Fähigkeiten und seine proaktive Arbeitsweise waren entscheidend für den Erfolg unseres Projekts.",
       "role": "Teampartner"
     }
+  },
+
+  "contact": {
+    "label": "Kontakt",
+    "title": "Lass uns zusammenarbeiten",
+    "subtitle": "Hast du ein Problem zu lösen?",
+    "text": "Ermutige Menschen, dich zu kontaktieren, und beschreibe, an welcher Rolle du interessiert bist. Zeige, dass du ihre Projekte durch deine Arbeit bereicherst.",
+    "question": "Du suchst einen Frontend-Entwickler?",
+    "talk": "Lass uns reden!",
+    "labels": {
+      "name": "Wie heißt du?",
+      "email": "Wie lautet deine E-Mail?",
+      "message": "Wie kann ich dir helfen?"
+    },
+    "placeholders": {
+      "name": "Dein Name",
+      "email": "deine@email.de",
+      "message": "Hallo Sven, ich interessiere mich für..."
+    },
+    "privacyBefore": "Ich habe die",
+    "privacyLink": "Datenschutzerklärung",
+    "privacyAfter": "gelesen und stimme der beschriebenen Verarbeitung meiner Daten zu.",
+    "button": "Sag Hallo ;)",
+    "errors": {
+      "nameRequired": "Bitte nenne mir deinen Namen.",
+      "nameMin": "Dein Name muss mindestens 2 Zeichen lang sein.",
+      "namePattern": "Bitte verwende nur Buchstaben.",
+      "emailRequired": "Ich brauche deine E-Mail, um zu antworten.",
+      "emailPattern": "Bitte gib eine gültige E-Mail-Adresse ein.",
+      "messageRequired": "Sag mir, wie ich dir helfen kann.",
+      "messageMin": "Deine Nachricht muss mindestens 10 Zeichen lang sein.",
+      "privacy": "Bitte akzeptiere die Datenschutzerklärung."
+    }
+  },
+
+  "footer": {
+    "role": "Webentwickler",
+    "location": "Plauen, Deutschland",
+    "email": "E-Mail",
+    "legal": "Impressum"
   }
 }
