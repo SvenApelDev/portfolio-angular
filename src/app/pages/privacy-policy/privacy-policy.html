@@ -1,8 +1,32 @@
 <main class="legal">
   <div class="container">
-    <a class="legal__back" routerLink="/" [attr.aria-label]="'legal.back' | translate">
-      <img src="assets/images/shared/icon-arrow-left.svg" alt="" />
-    </a>
+    @if (fromContact) {
+      <a class="privacy__back privacy__back--top" routerLink="/" fragment="contact">
+        <span class="privacy__back-icon">
+          <img
+            class="privacy__back-default"
+            src="assets/images/projects/icon-arrow-forward.svg"
+            alt=""
+          />
+          <img
+            class="privacy__back-hover"
+            src="assets/images/projects/icon-arrow-forward-hover.svg"
+            alt=""
+          />
+        </span>
+        {{ 'privacy.back' | translate }}
+      </a>
+    } @else {
+      <a
+        class="legal__back"
+        routerLink="/"
+        fragment="footer"
+        [attr.aria-label]="'legal.back' | translate"
+      >
+        <img src="assets/images/shared/icon-arrow-left.svg" alt="" />
+      </a>
+    }
+
     <h1 class="section-title legal__title">{{ 'privacy.title' | translate }}</h1>
 
     <div class="legal__content">
@@ -198,5 +222,22 @@
         </p>
       </div>
     </div>
+    @if (fromContact) {
+      <a class="privacy__back" routerLink="/" fragment="contact">
+        <span class="privacy__back-icon">
+          <img
+            class="privacy__back-default"
+            src="assets/images/projects/icon-arrow-forward.svg"
+            alt=""
+          />
+          <img
+            class="privacy__back-hover"
+            src="assets/images/projects/icon-arrow-forward-hover.svg"
+            alt=""
+          />
+        </span>
+        {{ 'privacy.back' | translate }}
+      </a>
+    }
   </div>
 </main>

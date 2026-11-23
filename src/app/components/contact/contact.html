@@ -126,7 +126,9 @@
           />
           <span>
             {{ 'contact.privacyBefore' | translate
-            }}<a routerLink="/privacy-policy">{{ 'contact.privacyLink' | translate }}</a>
+            }}<a routerLink="/privacy-policy" [queryParams]="{ from: 'contact' }">{{
+              'contact.privacyLink' | translate
+            }}</a>
             {{ 'contact.privacyAfter' | translate }}
           </span>
         </label>

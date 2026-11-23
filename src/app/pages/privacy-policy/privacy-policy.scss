@@ -1,3 +1,5 @@
+@use 'all-styles' as *;
+
 .privacy__section-title {
   margin-top: 32px;
 }
@@ -8,4 +10,60 @@
   gap: 8px;
   padding-left: 20px;
   list-style: disc;
+}
+
+.privacy__back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  margin: 32px auto 0;
+  font-size: fluid(16px, 18px);
+  color: $color-primary;
+  transition: color 0.2s ease;
+}
+
+.privacy__back-icon {
+  position: relative;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  transform: rotate(180deg);
+  transition: transform 0.2s ease;
+
+  img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.2s ease;
+  }
+}
+
+.privacy__back-hover {
+  opacity: 0;
+}
+
+.privacy__back:hover {
+  color: $color-text;
+
+  .privacy__back-icon {
+    transform: rotate(180deg) translateX(4px);
+  }
+
+  .privacy__back-default {
+    opacity: 0;
+  }
+
+  .privacy__back-hover {
+    opacity: 1;
+  }
+}
+
+.privacy__back--top {
+  margin: -40px 0 40px fluid(0px, 120px);
+
+  @include respond(tablet) {
+    margin-top: 0;
+  }
 }
