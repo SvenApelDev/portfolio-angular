@@ -1,1 +1,202 @@
-<p>privacy-policy works!</p>
+<main class="legal">
+  <div class="container">
+    <a class="legal__back" routerLink="/" [attr.aria-label]="'legal.back' | translate">
+      <img src="assets/images/shared/icon-arrow-left.svg" alt="" />
+    </a>
+    <h1 class="section-title legal__title">{{ 'privacy.title' | translate }}</h1>
+
+    <div class="legal__content">
+      <!-- 1. Privacy at a glance -->
+      <h2 class="section-label privacy__section-title">{{ 'privacy.s1.title' | translate }}</h2>
+
+      <div class="legal__block">
+        <h2>{{ 'privacy.s1.generalTitle' | translate }}</h2>
+        <p>{{ 'privacy.s1.generalText' | translate }}</p>
+      </div>
+
+      <div class="legal__block">
+        <h2>{{ 'privacy.s1.collectionTitle' | translate }}</h2>
+        <p>
+          <strong>{{ 'privacy.s1.whoQuestion' | translate }}</strong>
+        </p>
+        <p>{{ 'privacy.s1.whoText' | translate }}</p>
+        <p>
+          <strong>{{ 'privacy.s1.howQuestion' | translate }}</strong>
+        </p>
+        <p>{{ 'privacy.s1.howText1' | translate }}</p>
+        <p>{{ 'privacy.s1.howText2' | translate }}</p>
+        <p>
+          <strong>{{ 'privacy.s1.whyQuestion' | translate }}</strong>
+        </p>
+        <p>{{ 'privacy.s1.whyText' | translate }}</p>
+        <p>
+          <strong>{{ 'privacy.s1.rightsQuestion' | translate }}</strong>
+        </p>
+        <p>{{ 'privacy.s1.rightsText1' | translate }}</p>
+        <p>{{ 'privacy.s1.rightsText2' | translate }}</p>
+      </div>
+
+      <!-- 2. Hosting -->
+      <h2 class="section-label privacy__section-title">{{ 'privacy.s2.title' | translate }}</h2>
+
+      <div class="legal__block">
+        <p>{{ 'privacy.s2.intro' | translate }}</p>
+      </div>
+
+      <div class="legal__block">
+        <h2>{{ 'privacy.s2.hetznerTitle' | translate }}</h2>
+        <p>{{ 'privacy.s2.hetznerText1' | translate }}</p>
+        <p [innerHTML]="'privacy.s2.hetznerText2' | translate"></p>
+        <p>{{ 'privacy.s2.hetznerText3' | translate }}</p>
+        <p>
+          <strong>{{ 'privacy.s2.avvTitle' | translate }}</strong>
+        </p>
+        <p>{{ 'privacy.s2.avvText' | translate }}</p>
+      </div>
+
+      <!-- 3. General information and mandatory information -->
+      <h2 class="section-label privacy__section-title">{{ 'privacy.s3.title' | translate }}</h2>
+
+      <div class="legal__block">
+        <h2>{{ 'privacy.s3.privacyTitle' | translate }}</h2>
+        <p>{{ 'privacy.s3.privacyText1' | translate }}</p>
+        <p>{{ 'privacy.s3.privacyText2' | translate }}</p>
+        <p>{{ 'privacy.s3.privacyText3' | translate }}</p>
+      </div>
+
+      <div class="legal__block">
+        <h2>{{ 'privacy.s3.responsibleTitle' | translate }}</h2>
+        <p>{{ 'privacy.s3.responsibleIntro' | translate }}</p>
+        <p>
+          Sven Apel<br />
+          Hainstraße 4<br />
+          08523 Plauen<br />
+          E-Mail: <a href="mailto:svenapel@web.de">svenapel@web.de</a>
+        </p>
+        <p>{{ 'privacy.s3.responsibleDefinition' | translate }}</p>
+      </div>
+
+      <div class="legal__block">
+        <h2>{{ 'privacy.s3.storageTitle' | translate }}</h2>
+        <p>{{ 'privacy.s3.storageText' | translate }}</p>
+      </div>
+
+      <div class="legal__block">
+        <h2>{{ 'privacy.s3.basisTitle' | translate }}</h2>
+        <p>{{ 'privacy.s3.basisText' | translate }}</p>
+      </div>
+
+      <div class="legal__block">
+        <h2>{{ 'privacy.s3.recipientsTitle' | translate }}</h2>
+        <p>{{ 'privacy.s3.recipientsText' | translate }}</p>
+      </div>
+
+      <div class="legal__block">
+        <h2>{{ 'privacy.s3.revokeTitle' | translate }}</h2>
+        <p>{{ 'privacy.s3.revokeText' | translate }}</p>
+      </div>
+
+      <div class="legal__block">
+        <h2>{{ 'privacy.s3.objectionTitle' | translate }}</h2>
+        <p>{{ 'privacy.s3.objectionText1' | translate }}</p>
+        <p>{{ 'privacy.s3.objectionText2' | translate }}</p>
+      </div>
+
+      <div class="legal__block">
+        <h2>{{ 'privacy.s3.complaintTitle' | translate }}</h2>
+        <p>{{ 'privacy.s3.complaintText' | translate }}</p>
+      </div>
+
+      <div class="legal__block">
+        <h2>{{ 'privacy.s3.portabilityTitle' | translate }}</h2>
+        <p>{{ 'privacy.s3.portabilityText' | translate }}</p>
+      </div>
+
+      <div class="legal__block">
+        <h2>{{ 'privacy.s3.accessTitle' | translate }}</h2>
+        <p>{{ 'privacy.s3.accessText' | translate }}</p>
+      </div>
+
+      <div class="legal__block">
+        <h2>{{ 'privacy.s3.restrictionTitle' | translate }}</h2>
+        <p>{{ 'privacy.s3.restrictionIntro' | translate }}</p>
+        <ul class="privacy__list">
+          <li>
+            <p>{{ 'privacy.s3.restrictionItem1' | translate }}</p>
+          </li>
+          <li>
+            <p>{{ 'privacy.s3.restrictionItem2' | translate }}</p>
+          </li>
+          <li>
+            <p>{{ 'privacy.s3.restrictionItem3' | translate }}</p>
+          </li>
+          <li>
+            <p>{{ 'privacy.s3.restrictionItem4' | translate }}</p>
+          </li>
+        </ul>
+        <p>{{ 'privacy.s3.restrictionOutro' | translate }}</p>
+      </div>
+
+      <div class="legal__block">
+        <h2>{{ 'privacy.s3.sslTitle' | translate }}</h2>
+        <p>{{ 'privacy.s3.sslText1' | translate }}</p>
+        <p>{{ 'privacy.s3.sslText2' | translate }}</p>
+      </div>
+
+      <div class="legal__block">
+        <h2>{{ 'privacy.s3.spamTitle' | translate }}</h2>
+        <p>{{ 'privacy.s3.spamText' | translate }}</p>
+      </div>
+
+      <!-- 4. Data collection on this website -->
+      <h2 class="section-label privacy__section-title">{{ 'privacy.s4.title' | translate }}</h2>
+
+      <div class="legal__block">
+        <h2>{{ 'privacy.s4.logsTitle' | translate }}</h2>
+        <p>{{ 'privacy.s4.logsIntro' | translate }}</p>
+        <ul class="privacy__list">
+          <li>
+            <p>{{ 'privacy.s4.logsItem1' | translate }}</p>
+          </li>
+          <li>
+            <p>{{ 'privacy.s4.logsItem2' | translate }}</p>
+          </li>
+          <li>
+            <p>{{ 'privacy.s4.logsItem3' | translate }}</p>
+          </li>
+          <li>
+            <p>{{ 'privacy.s4.logsItem4' | translate }}</p>
+          </li>
+          <li>
+            <p>{{ 'privacy.s4.logsItem5' | translate }}</p>
+          </li>
+          <li>
+            <p>{{ 'privacy.s4.logsItem6' | translate }}</p>
+          </li>
+        </ul>
+        <p>{{ 'privacy.s4.logsText1' | translate }}</p>
+        <p>{{ 'privacy.s4.logsText2' | translate }}</p>
+      </div>
+
+      <div class="legal__block">
+        <h2>{{ 'privacy.s4.formTitle' | translate }}</h2>
+        <p>{{ 'privacy.s4.formText1' | translate }}</p>
+        <p>{{ 'privacy.s4.formText2' | translate }}</p>
+        <p>{{ 'privacy.s4.formText3' | translate }}</p>
+      </div>
+
+      <div class="legal__block">
+        <h2>{{ 'privacy.s4.mailTitle' | translate }}</h2>
+        <p>{{ 'privacy.s4.mailText1' | translate }}</p>
+        <p>{{ 'privacy.s4.mailText2' | translate }}</p>
+        <p>{{ 'privacy.s4.mailText3' | translate }}</p>
+        <p>
+          {{ 'privacy.source' | translate }}
+          <a href="https://www.e-recht24.de" target="_blank" rel="noopener noreferrer"
+            >https://www.e-recht24.de</a
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+</main>
