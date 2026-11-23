@@ -5,5 +5,63 @@
     "projects": "Projekte",
     "openMenu": "Menü öffnen",
     "closeMenu": "Menü schließen"
+  },
+
+  "about": {
+    "label": "Wer ich bin",
+    "title": "Über mich",
+    "photoAlt": "Porträt von Sven Apel",
+    "intro": "Hallo, ich bin Sven! Nach über zehn Jahren im UI/UX-Design und als Leiter eines Designteams habe ich mich zum Frontend-Entwickler weitergebildet. Meine Konzepte in funktionierende Software umzusetzen, treibt mich an.",
+    "location": "Ich lebe in Plauen und bin offen für Remote-Arbeit oder Stellen in meiner Region.",
+    "learning": "Sauberer, responsiver Code und ein Auge fürs Detail sind mein Standard. Jedes Projekt bringt mir etwas Neues bei.",
+    "approach": "Kreatives Problemlösen ist meine Stärke. Jedes Projekt bekommt die passende Technologie, und die Usability bleibt immer im Fokus. Durch meine Arbeit als Freelancer für Unternehmen und Start-ups weiß ich, wie wichtig gute Zusammenarbeit ist."
+  },
+
+  "skills": {
+    "label": "Technologien",
+    "title": "Skill Set",
+    "intro": "Seit Jahren arbeite ich mit HTML, CSS und JavaScript, von einer mobilen Web-App bis zu Kunden-Websites. Heute entwickle ich mit Angular und TypeScript. Webentwicklung verändert sich schnell, deshalb bleibe ich über Dokumentationen, YouTube und echte Kundenprojekte auf dem Laufenden.",
+    "ctaTitle": "Du brauchst",
+    "ctaHighlight": "einen anderen Skill?",
+    "ctaText": "Neue Technologien begeistern mich. Sag mir einfach, was dein Projekt braucht.",
+    "button": "Lass uns reden!",
+    "growth": "Ich habe ein besonderes Interesse am Lernen"
+  },
+
+  "projects": {
+    "label": "Portfolio",
+    "title": "Ausgewählte Projekte",
+    "intro": "Hier findest du eine Auswahl meiner Arbeiten. Probier die Projekte aus und sieh meine Fähigkeiten in Aktion.",
+    "subtitle": "Worum geht es in diesem Projekt?",
+    "live": "Live-Test",
+    "next": "Nächstes Projekt",
+    "close": "Dialog schließen",
+    "screenshotAlt": "Screenshot von {{title}}",
+    "join": {
+      "description": "Aufgabenverwaltung im Kanban-Stil. Erstelle Aufgaben, verschiebe sie per Drag-and-drop über das Board und weise sie Kontakten und Kategorien zu."
+    },
+    "pollo": {
+      "description": "Objektorientiertes Jump-and-Run-Spiel mit Kollisionserkennung und Endgegner-Logik. Hilf Pepe, Münzen und Salsa zu sammeln, um die verrückte Henne zu besiegen."
+    }
+  },
+
+  "references": {
+    "title": "Was meine Kollegen über mich sagen",
+    "label": "Referenzen",
+    "carousel": "Karussell",
+    "prev": "Vorherige Referenz",
+    "next": "Nächste Referenz",
+    "first": {
+      "text": "Lukas hat sich als zuverlässiger Gruppenpartner erwiesen. Seine technischen Fähigkeiten und seine proaktive Arbeitsweise waren entscheidend für den Erfolg unseres Projekts.",
+      "role": "Teampartner"
+    },
+    "second": {
+      "text": "Lukas hat sich als zuverlässiger Gruppenpartner erwiesen. Seine technischen Fähigkeiten und seine proaktive Arbeitsweise waren entscheidend für den Erfolg unseres Projekts.",
+      "role": "Teampartner"
+    },
+    "third": {
+      "text": "Lukas hat sich als zuverlässiger Gruppenpartner erwiesen. Seine technischen Fähigkeiten und seine proaktive Arbeitsweise waren entscheidend für den Erfolg unseres Projekts.",
+      "role": "Teampartner"
+    }
   }
 }
