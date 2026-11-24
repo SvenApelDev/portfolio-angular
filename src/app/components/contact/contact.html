@@ -86,6 +86,7 @@
             'contact.labels.message' | translate
           }}</label>
           <textarea
+            #messageArea
             class="contact__input contact__input--message"
             id="contact-message"
             rows="1"
@@ -140,9 +141,25 @@
         </p>
       </div>
 
-      <button class="btn contact__btn" type="submit" [disabled]="contactForm.invalid">
+      <button
+        class="btn contact__btn"
+        type="submit"
+        [disabled]="contactForm.invalid || isSending()"
+      >
         <span class="btn__label">{{ 'contact.button' | translate }}</span>
       </button>
     </form>
   </div>
+
+  @if (toast(); as type) {
+    <div
+      class="toast"
+      [class.toast--error]="type === 'error'"
+      role="status"
+      animate.enter="toast--enter"
+      animate.leave="toast--leave"
+    >
+      {{ (type === 'success' ? 'contact.toast.success' : 'contact.toast.error') | translate }}
+    </div>
+  }
 </section>

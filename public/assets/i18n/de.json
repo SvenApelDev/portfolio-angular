@@ -103,6 +103,10 @@
     "privacyLink": "Datenschutzerklärung",
     "privacyAfter": "gelesen und stimme der beschriebenen Verarbeitung meiner Daten zu.",
     "button": "Sag Hallo ;)",
+    "toast": {
+      "success": "Danke! Deine Nachricht wurde gesendet.",
+      "error": "Leider konnte deine Nachricht nicht gesendet werden. Bitte versuche es später erneut."
+    },
     "errors": {
       "nameRequired": "Bitte nenne mir deinen Namen.",
       "nameMin": "Dein Name muss mindestens 2 Zeichen lang sein.",
