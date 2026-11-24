@@ -7,7 +7,7 @@ export interface Reference {
 export const REFERENCES: Reference[] = [
   {
     textKey: 'references.first.text',
-    name: 'H.Janisch',
+    name: 'Ron',
     roleKey: 'references.first.role',
   },
     {
