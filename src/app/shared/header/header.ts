@@ -1,7 +1,8 @@
-import { Component, inject } from '@angular/core';
+import { ApplicationRef, Component, inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   imports: [RouterLink, TranslatePipe],
@@ -15,6 +16,7 @@ export class Header {
   isMenuOpen = false;
   private translate = inject(TranslateService);
   currentLang = 'en';
+  private appRef = inject(ApplicationRef);
 
   toggleMenu(): void {
     if (this.isMenuOpen) {
@@ -34,8 +36,20 @@ export class Header {
   }
 
   switchLanguage(lang: string): void {
-    this.translate.use(lang);
-    this.currentLang = lang;
-    this.document.documentElement.lang = lang;
+    if (lang === this.currentLang) return;
+
+    const applyLanguage = async (): Promise<void> => {
+      await firstValueFrom(this.translate.use(lang));
+      this.currentLang = lang;
+      this.document.documentElement.lang = lang;
+      this.appRef.tick();
+    };
+
+    if (typeof this.document.startViewTransition !== 'function') {
+      applyLanguage();
+      return;
+    }
+
+    this.document.startViewTransition(applyLanguage);
   }
 }
