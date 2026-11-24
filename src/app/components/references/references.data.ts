@@ -12,7 +12,7 @@ export const REFERENCES: Reference[] = [
   },
     {
     textKey: 'references.second.text',
-    name: 'H.Janisch',
+    name: 'Bhagyashri Deore',
     roleKey: 'references.second.role',
   },
     {
