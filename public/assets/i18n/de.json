@@ -86,7 +86,7 @@
     "label": "Kontakt",
     "title": "Lass uns zusammenarbeiten",
     "subtitle": "Hast du ein Problem zu lösen?",
-    "text": "Ermutige Menschen, dich zu kontaktieren, und beschreibe, an welcher Rolle du interessiert bist. Zeige, dass du ihre Projekte durch deine Arbeit bereicherst.",
+    "text": "Ich entwickle responsive, barrierefreie Frontends mit Angular, TypeScript und SCSS. Mein UI/UX-Hintergrund ist dabei ein echtes Plus. Erzähl mir von deinem Projekt oder deiner offenen Stelle.",
     "question": "Du suchst einen Frontend-Entwickler?",
     "talk": "Lass uns reden!",
     "labels": {
@@ -116,7 +116,7 @@
   },
 
   "footer": {
-    "role": "Webentwickler",
+    "role": "Frontend-Entwickler",
     "location": "Plauen, Deutschland",
     "email": "E-Mail",
     "legal": "Impressum",

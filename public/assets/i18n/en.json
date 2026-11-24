@@ -86,8 +86,8 @@
     "label": "Contact me",
     "title": "Let's work together",
     "subtitle": "Got a problem to solve?",
-    "text": "Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.",
-    "question": "Need a Frontend developer?",
+    "text": "I build responsive, accessible frontends with Angular, TypeScript and SCSS. My UI/UX background is a real bonus. Tell me about your project or open position.",
+    "question": "Need a Frontend Developer?",
     "talk": "Let's talk!",
     "labels": {
       "name": "What's your name?",
@@ -116,8 +116,8 @@
   },
 
   "footer": {
-    "role": "Web Developer",
-    "location": "Plauen Germany",
+    "role": "Frontend Developer",
+    "location": "Plauen, Germany",
     "email": "Email",
     "legal": "Legal Notice",
     "privacy": "Privacy Policy"
