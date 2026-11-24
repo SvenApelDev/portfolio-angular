@@ -78,6 +78,14 @@
       transition: opacity 0.2s ease;
     }
 
+    &.header__link--active {
+      color: $color-primary;
+
+      &::after {
+        opacity: 1;
+      }
+    }
+
     &:hover::after {
       opacity: 1;
     }

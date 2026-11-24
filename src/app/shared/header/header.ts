@@ -1,4 +1,11 @@
-import { ApplicationRef, Component, inject } from '@angular/core';
+import {
+  afterNextRender,
+  ApplicationRef,
+  Component,
+  DestroyRef,
+  inject,
+  signal,
+} from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
@@ -17,6 +24,18 @@ export class Header {
   private translate = inject(TranslateService);
   currentLang = 'en';
   private appRef = inject(ApplicationRef);
+  private destroyRef = inject(DestroyRef);
+  private readonly sectionIds = ['about-me', 'skills', 'projects'];
+  activeSection = signal('');
+
+  constructor() {
+    afterNextRender(() => {
+      const update = () => this.activeSection.set(this.findActiveSection());
+      window.addEventListener('scroll', update, { passive: true });
+      update();
+      this.destroyRef.onDestroy(() => window.removeEventListener('scroll', update));
+    });
+  }
 
   toggleMenu(): void {
     if (this.isMenuOpen) {
@@ -51,5 +70,14 @@ export class Header {
     }
 
     this.document.startViewTransition(applyLanguage);
+  }
+
+  private findActiveSection(): string {
+    const line = window.innerHeight / 3;
+    for (const id of this.sectionIds) {
+      const rect = this.document.getElementById(id)?.getBoundingClientRect();
+      if (rect && rect.top <= line && rect.bottom > line) return id;
+    }
+    return '';
   }
 }

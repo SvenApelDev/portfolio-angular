@@ -22,13 +22,31 @@
 
       <ul class="header__links">
         <li>
-          <a routerLink="/" fragment="about-me">{{ 'header.about' | translate }}</a>
+                    <a
+            class="header__link"
+            [class.header__link--active]="activeSection() === 'about-me'"
+            routerLink="/"
+            fragment="about-me"
+            >{{ 'header.about' | translate }}</a
+          >
         </li>
         <li>
-          <a routerLink="/" fragment="skills">{{ 'header.skills' | translate }}</a>
+          <a
+            class="header__link"
+            [class.header__link--active]="activeSection() === 'skills'"
+            routerLink="/"
+            fragment="skills"
+            >{{ 'header.skills' | translate }}</a
+          >
         </li>
         <li>
-          <a routerLink="/" fragment="projects">{{ 'header.projects' | translate }}</a>
+          <a
+            class="header__link"
+            [class.header__link--active]="activeSection() === 'projects'"
+            routerLink="/"
+            fragment="projects"
+            >{{ 'header.projects' | translate }}</a
+          >
         </li>
       </ul>
     </nav>
@@ -61,7 +79,11 @@
       </button>
 
       @if (isMenuOpen) {
-        <nav id="mobile-menu" class="header__menu" [attr.aria-label]="'header.mobileNav' | translate">
+        <nav
+          id="mobile-menu"
+          class="header__menu"
+          [attr.aria-label]="'header.mobileNav' | translate"
+        >
           <ul class="header__menu-links">
             <li>
               <a routerLink="/" fragment="about-me" (click)="closeMenu()">{{
