@@ -1,6 +1,10 @@
 <section id="about-me" class="about-me">
   <div class="about-me__inner container">
-    <div class="about-me__photo-wrapper">
+    <div
+      #photoWrapper
+      class="about-me__photo-wrapper"
+      [class.about-me__photo-wrapper--visible]="isPatternVisible()"
+    >
       <img
         class="about-me__pattern"
         src="assets/images/about-me/preview-pattern-picture.svg"

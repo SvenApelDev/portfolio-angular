@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { afterNextRender, Component, ElementRef, signal, viewChild } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
@@ -13,4 +13,21 @@ export class AboutMe {
     { icon: 'icon-cognition.svg', key: 'about.learning' },
     { icon: 'icon-quality.svg', key: 'about.approach' },
   ];
+
+  private photoWrapper = viewChild.required<ElementRef<HTMLElement>>('photoWrapper');
+  protected isPatternVisible = signal(false);
+
+  constructor() {
+    afterNextRender(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (!entry.isIntersecting) return;
+          this.isPatternVisible.set(true);
+          observer.disconnect();
+        },
+        { threshold: 0.6 },
+      );
+      observer.observe(this.photoWrapper().nativeElement);
+    });
+  }
 }
