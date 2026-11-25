@@ -77,7 +77,9 @@
   gap: 16px;
   padding: 32px;
   border-bottom: 1px solid $color-primary;
-  transition: background-color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    padding-bottom 0.2s ease;
 
   &:hover,
   &:focus-within {
@@ -88,6 +90,14 @@
 
   &:focus-within {
     background-color: $color-primary-10;
+
+    &:has(.contact__input--message:not(:placeholder-shown)) {
+      padding-bottom: 24px;
+
+      .contact__error:empty {
+        display: none;
+      }
+    }
   }
 }
 
@@ -123,12 +133,37 @@
     -webkit-box-shadow: 0 0 0 1000px $color-background inset;
     caret-color: $color-text;
     transition: background-color 9999s ease-in-out 0s;
+
+    @include respond(small) {
+      max-height: calc(1.2em * 6 + 12px);
+    }
   }
 
   &--message {
     resize: none;
-    max-height: calc(1.2em * 6);
+    width: calc(100% + 29px);
+    max-height: calc(1.2em * 8 + 12px);
     overflow-y: auto;
+    padding-right: 29px;
+    padding-block: 6px;
+    margin-block: -3px;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: rgba($color-text, 0.12);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-primary;
+    }
+
+    @supports not selector(::-webkit-scrollbar) {
+      scrollbar-width: thin;
+      scrollbar-color: $color-primary rgba($color-text, 0.12);
+    }
   }
 
   &--error::placeholder {
