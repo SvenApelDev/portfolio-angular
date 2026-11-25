@@ -1,4 +1,4 @@
-import { Component, ElementRef, inject, signal, viewChild } from '@angular/core';
+import { afterNextRender, Component, ElementRef, inject, signal, viewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RouterLink } from '@angular/router';
@@ -20,6 +20,11 @@ export class Contact {
 
   isSending = signal(false);
   toast = signal<'success' | 'error' | null>(null);
+  constructor() {
+    afterNextRender(() => {
+      setTimeout(() => this.autoResize());
+    });
+  }
 
   onSubmit(form: NgForm): void {
     if (form.invalid || this.isSending()) return;
@@ -45,8 +50,9 @@ export class Contact {
     (event.target as HTMLElement).blur();
   }
 
-  autoResize(event: Event): void {
-    const textarea = event.target as HTMLTextAreaElement;
+  autoResize(): void {
+    const textarea = this.messageArea()?.nativeElement;
+    if (!textarea) return;
     textarea.style.height = 'auto';
     textarea.style.height = `${textarea.scrollHeight}px`;
   }

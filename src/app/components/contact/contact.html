@@ -103,7 +103,7 @@
             [(ngModel)]="contactData.message"
             [ngModelOptions]="{ updateOn: 'blur' }"
             #messageField="ngModel"
-            (input)="autoResize($event)"
+            (input)="autoResize()"
             required
             minlength="10"
           ></textarea>
