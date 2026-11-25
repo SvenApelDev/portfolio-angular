@@ -37,7 +37,7 @@
   position: relative;
   transition: background-color 0.2s ease;
 
-  @include respond(mobile) {
+  @include respond(small) {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
