@@ -38,12 +38,21 @@
 
   <div class="references__nav">
     <button
-      class="references__arrow"
+      class="references__arrow references__arrow--prev"
       type="button"
       [attr.aria-label]="'references.prev' | translate"
       (click)="prev()"
     >
-      <img src="assets/images/shared/icon-arrow-left.svg" alt="" />
+      <img
+        class="references__arrow-icon"
+        src="assets/images/references/icon-arrow-back.svg"
+        alt=""
+      />
+      <img
+        class="references__arrow-icon references__arrow-icon--hover"
+        src="assets/images/references/icon-arrow-back-hover.svg"
+        alt=""
+      />
     </button>
 
     <div class="references__dots" aria-hidden="true">
@@ -61,7 +70,16 @@
       [attr.aria-label]="'references.next' | translate"
       (click)="next()"
     >
-      <img src="assets/images/shared/icon-arrow-left.svg" alt="" />
+      <img
+        class="references__arrow-icon"
+        src="assets/images/references/icon-arrow-forward.svg"
+        alt=""
+      />
+      <img
+        class="references__arrow-icon references__arrow-icon--hover"
+        src="assets/images/references/icon-arrow-forward-hover.svg"
+        alt=""
+      />
     </button>
   </div>
 </section>
