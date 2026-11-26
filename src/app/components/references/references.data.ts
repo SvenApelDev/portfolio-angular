@@ -17,7 +17,7 @@ export const REFERENCES: Reference[] = [
   },
     {
     textKey: 'references.third.text',
-    name: 'H.Janisch',
+    name: 'Oguz Akankan',
     roleKey: 'references.third.role',
   },
 ];
